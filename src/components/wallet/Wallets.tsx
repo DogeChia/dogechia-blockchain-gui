@@ -188,6 +188,7 @@ export default function Wallets() {
               ))}
             </StyledList>
           </Flex>
+          <CreateWallet />
         </Flex>
       }
     >
