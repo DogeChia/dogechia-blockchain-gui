@@ -26,7 +26,9 @@ const StyledFiberManualRecordIcon = styled(FiberManualRecordIcon)`
   font-size: 1rem;
 `;
 
-const StyledFlexContainer = styled(({ color: Color, ...rest }) => <Flex {...rest} />)`
+const StyledFlexContainer = styled(({ color: Color, ...rest }) => (
+  <Flex {...rest} />
+))`
   color: ${({ color }) => color};
 `;
 
@@ -38,9 +40,7 @@ export default function FarmerStatusComponent() {
 
   return (
     <StyledFlexContainer color={color} alignItems="center" gap={1}>
-      <span>
-        {title}
-      </span>
+      <span>{title}</span>
       <StyledFiberManualRecordIcon />
     </StyledFlexContainer>
   );

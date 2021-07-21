@@ -1,35 +1,59 @@
-import React, { ReactNode } from 'react';
+import React /* , { ReactNode } */ from 'react';
 import { Trans } from '@lingui/macro';
-import Grid from '@material-ui/core/Grid';
-import { AlertDialog, Flex, Card } from '@dogechia/core';
+import {
+  More,
+  Amount,
+  Fee,
+  Form,
+  TextField as ChiaTextField,
+  AlertDialog,
+  CopyToClipboard,
+  Flex,
+  Card,
+  ConfirmDialog,
+} from '@dogechia/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useDispatch, useSelector } from 'react-redux';
+import isNumeric from 'validator/es/lib/isNumeric';
+import { useForm, useWatch } from 'react-hook-form';
 import {
+  /*
   Tooltip,
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  */
   Box,
   Typography,
   Button,
   TextField,
+  InputAdornment,
+  Grid,
+  ListItemIcon,
+  MenuItem,
 } from '@material-ui/core';
 import {
-  ExpandMore as ExpandMoreIcon,
-  Help as HelpIcon,
+  // ExpandMore as ExpandMoreIcon,
+  // Help as HelpIcon,
+  Delete as DeleteIcon,
 } from '@material-ui/icons';
 import {
   get_address,
   send_transaction,
   farm_block,
 } from '../../../modules/message';
-import { mojo_to_dogechia_string, dogechia_to_mojo } from '../../../util/dogechia';
+import { /* mojo_to_dogechia_string, */ dogechia_to_mojo } from '../../../util/dogechia';
 import { openDialog } from '../../../modules/dialog';
 import { get_transaction_result } from '../../../util/transaction_result';
 import config from '../../../config/config';
 import type { RootState } from '../../../modules/rootReducer';
 import WalletHistory from '../WalletHistory';
-import useCurrencyCode from '../../../hooks/useCurrencyCode';
+// import useCurrencyCode from '../../../hooks/useCurrencyCode';
+import { deleteUnconfirmedTransactions } from '../../../modules/incoming';
+// import WalletGraph from '../WalletGraph';
+import WalletCards from './WalletCards';
+import WalletStatus from '../WalletStatus';
+import useOpenDialog from '../../../hooks/useOpenDialog';
 
 const drawerWidth = 240;
 
@@ -189,185 +213,67 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-type BalanceCardSubSectionProps = {
-  title: ReactNode;
-  tooltip?: ReactNode;
-  balance: number;
-};
-
-function BalanceCardSubSection(props: BalanceCardSubSectionProps) {
-  const currencyCode = useCurrencyCode();
-
-  return (
-    <Grid item xs={12}>
-      <Box display="flex">
-        <Box flexGrow={1}>
-          <Typography variant="subtitle1">
-            {props.title}
-            {props.tooltip && (
-              <Tooltip title={props.tooltip}>
-                <HelpIcon style={{ color: '#c8c8c8', fontSize: 12 }} />
-              </Tooltip>
-            )}
-          </Typography>
-        </Box>
-        <Box>
-          <Typography variant="subtitle1">
-            {mojo_to_dogechia_string(props.balance)} {currencyCode}
-          </Typography>
-        </Box>
-      </Box>
-    </Grid>
-  );
-}
-
-type BalanceCardProps = {
-  wallet_id: number;
-};
-
-function BalanceCard(props: BalanceCardProps) {
-  const id = props.wallet_id;
-  const balance = useSelector(
-    (state: RootState) => state.wallet_state.wallets[id].balance_total,
-  );
-  const balance_spendable = useSelector(
-    (state: RootState) => state.wallet_state.wallets[id].balance_spendable,
-  );
-  const balance_pending = useSelector(
-    (state: RootState) => state.wallet_state.wallets[id].balance_pending,
-  );
-
-  const balance_change = useSelector(
-    (state: RootState) => state.wallet_state.wallets[id].balance_change,
-  );
-  const balance_ptotal = balance + balance_pending;
-  const classes = useStyles();
-
-  return (
-    <Card title={<Trans>Balance</Trans>}>
-      <BalanceCardSubSection
-        title={<Trans>Total Balance</Trans>}
-        balance={balance}
-        tooltip={
-          <Trans>
-            This is the total amount of dogechia in the blockchain at the current
-            peak sub block that is controlled by your private keys. It includes
-            frozen farming rewards, but not pending incoming and outgoing
-            transactions.
-          </Trans>
-        }
-      />
-      <BalanceCardSubSection
-        title={<Trans>Spendable Balance</Trans>}
-        balance={balance_spendable}
-        tooltip={
-          <Trans>
-            This is the amount of DogeChia that you can currently use to make
-            transactions. It does not include pending farming rewards, pending
-            incoming transactions, and DogeChia that you have just spent but is not
-            yet in the blockchain.
-          </Trans>
-        }
-      />
-      <Grid item xs={12}>
-        <Box display="flex">
-          <Box flexGrow={1}>
-            <Accordion className={classes.front}>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography className={classes.heading}>
-                  <Trans>View pending balances</Trans>
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Grid container spacing={0}>
-                  <BalanceCardSubSection
-                    title={<Trans>Pending Total Balance</Trans>}
-                    balance={balance_ptotal}
-                    tooltip={
-                      <Trans>
-                        This is the total balance + pending balance: it is what
-                        your balance will be after all pending transactions are
-                        confirmed.
-                      </Trans>
-                    }
-                  />
-                  <BalanceCardSubSection
-                    title={<Trans>Pending Balance</Trans>}
-                    balance={balance_pending}
-                    tooltip={
-                      <Trans>
-                        This is the sum of the incoming and outgoing pending
-                        transactions (not yet included into the blockchain).
-                        This does not include farming rewards.
-                      </Trans>
-                    }
-                  />
-                  <BalanceCardSubSection
-                    title={<Trans>Pending Change</Trans>}
-                    balance={balance_change}
-                    tooltip={
-                      <Trans>
-                        This is the pending change, which are change coins which
-                        you have sent to yourself, but have not been confirmed
-                        yet.
-                      </Trans>
-                    }
-                  />
-                </Grid>
-              </AccordionDetails>
-            </Accordion>
-          </Box>
-        </Box>
-      </Grid>
-    </Card>
-  );
-}
-
 type SendCardProps = {
   wallet_id: number;
 };
 
+type SendTransactionData = {
+  address: string;
+  amount: string;
+  fee: string;
+};
+
 function SendCard(props: SendCardProps) {
-  const id = props.wallet_id;
+  const { wallet_id } = props;
   const classes = useStyles();
-  let address_input: HTMLInputElement;
-  let amount_input: HTMLInputElement;
-  let fee_input: HTMLInputElement;
   const dispatch = useDispatch();
 
-  const sending_transaction = useSelector(
-    (state: RootState) => state.wallet_state.wallets[id].sending_transaction,
-  );
+  const methods = useForm<SendTransactionData>({
+    shouldUnregister: false,
+    defaultValues: {
+      address: '',
+      amount: '',
+      fee: '',
+    },
+  });
 
-  const send_transaction_result = useSelector(
-    (state: RootState) =>
-      state.wallet_state.wallets[id].send_transaction_result,
-  );
+  const addressValue = useWatch<string>({
+    control: methods.control,
+    name: 'address',
+  });
+
   const syncing = useSelector(
     (state: RootState) => state.wallet_state.status.syncing,
   );
 
+  const wallet = useSelector((state: RootState) =>
+    state.wallet_state.wallets?.find((item) => item.id === wallet_id),
+  );
+
+  if (!wallet) {
+    return null;
+  }
+
+  const { sending_transaction, send_transaction_result } = wallet;
+
   const result = get_transaction_result(send_transaction_result);
+
   const result_message = result.message;
   const result_class = result.success
     ? classes.resultSuccess
     : classes.resultFailure;
 
   function farm() {
-    const address = address_input.value;
-    if (address !== '') {
-      dispatch(farm_block(address));
+    if (addressValue) {
+      dispatch(farm_block(addressValue));
     }
   }
 
-  function send() {
+  function handleSubmit(data: SendTransactionData) {
     if (sending_transaction) {
       return;
     }
+
     if (syncing) {
       dispatch(
         openDialog(
@@ -379,13 +285,8 @@ function SendCard(props: SendCardProps) {
       return;
     }
 
-    let address = address_input.value.trim();
-    if (
-      amount_input.value === '' ||
-      Number(amount_input.value) === 0 ||
-      !Number(amount_input.value) ||
-      Number.isNaN(Number(amount_input.value))
-    ) {
+    const amount = data.amount.trim();
+    if (!isNumeric(amount)) {
       dispatch(
         openDialog(
           <AlertDialog>
@@ -395,7 +296,9 @@ function SendCard(props: SendCardProps) {
       );
       return;
     }
-    if (fee_input.value === '' || Number.isNaN(Number(fee_input.value))) {
+
+    const fee = data.fee.trim();
+    if (!isNumeric(fee)) {
       dispatch(
         openDialog(
           <AlertDialog>
@@ -405,129 +308,103 @@ function SendCard(props: SendCardProps) {
       );
       return;
     }
-    const amount = dogechia_to_mojo(amount_input.value);
-    const fee = dogechia_to_mojo(fee_input.value);
 
+    let address = data.address;
     if (address.includes('colour')) {
       dispatch(
         openDialog(
           <AlertDialog>
             <Trans>
-              Error: Cannot send dogechia to coloured address. Please enter a dogechia
-              address.
+              Error: Cannot send dogechia to coloured address. Please enter a dogechia address.
             </Trans>
           </AlertDialog>,
         ),
       );
       return;
     }
-    if (address.slice(0, 12) === 'dogechia_addr://') {
+
+    if (address.slice(0, 12) === 'chia_addr://') {
       address = address.slice(12);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
       address = address.slice(2);
     }
 
-    const amount_value = Number.parseFloat(amount);
-    const fee_value = Number.parseFloat(fee);
+    const amountValue = Number.parseFloat(dogechia_to_mojo(amount));
+    const feeValue = Number.parseFloat(dogechia_to_mojo(fee));
 
-    dispatch(send_transaction(id, amount_value, fee_value, address));
-    address_input.value = '';
-    amount_input.value = '';
-    fee_input.value = '';
+    dispatch(send_transaction(wallet_id, amountValue, feeValue, address));
+
+    methods.reset();
   }
 
   return (
     <Card
       title={<Trans>Create Transaction</Trans>}
-      tooltip={(
+      tooltip={
         <Trans>
-          On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute.
+          On average there is one minute between each transaction block. Unless
+          there is congestion you can expect your transaction to be included in
+          less than a minute.
         </Trans>
-      )}
+      }
     >
-      {result_message && (
-        <Grid item xs={12}>
-          <p className={result_class}>{result_message}</p>
-        </Grid>
-      )}
-      <Grid item xs={12}>
-        <Box display="flex">
-          <Box flexGrow={1}>
-            <TextField
-              id="filled-secondary"
+      {result_message && <p className={result_class}>{result_message}</p>}
+
+      <Form methods={methods} onSubmit={handleSubmit}>
+        <Grid spacing={2} container>
+          <Grid xs={12} item>
+            <ChiaTextField
+              name="address"
               variant="filled"
               color="secondary"
               fullWidth
               disabled={sending_transaction}
-              inputRef={(input) => {
-                address_input = input;
-              }}
               label={<Trans>Address / Puzzle hash</Trans>}
             />
-          </Box>
-          <Box />
-        </Box>
-      </Grid>
-      <Grid item xs={12}>
-        <Box display="flex">
-          <Box flexGrow={6}>
-            <TextField
+          </Grid>
+          <Grid xs={12} md={6} item>
+            <Amount
               id="filled-secondary"
               variant="filled"
               color="secondary"
-              fullWidth
+              name="amount"
               disabled={sending_transaction}
-              className={classes.amountField}
-              margin="normal"
-              inputRef={(input) => {
-                amount_input = input;
-              }}
               label={<Trans>Amount</Trans>}
+              fullWidth
             />
-          </Box>
-          <Box flexGrow={6}>
-            <TextField
+          </Grid>
+          <Grid xs={12} md={6} item>
+            <Fee
               id="filled-secondary"
               variant="filled"
-              fullWidth
+              name="fee"
               color="secondary"
-              margin="normal"
               disabled={sending_transaction}
-              inputRef={(input) => {
-                fee_input = input;
-              }}
               label={<Trans>Fee</Trans>}
+              fullWidth
             />
-          </Box>
-        </Box>
-      </Grid>
-      <Grid item xs={12}>
-        <Box display="flex">
-          <Box flexGrow={1}>
-            <Button
-              onClick={farm}
-              className={classes.sendButton}
-              style={config.local_test ? {} : { visibility: 'hidden' }}
-              variant="contained"
-              color="primary"
-            >
-              <Trans>Farm</Trans>
-            </Button>
-          </Box>
-          <Box>
-            <Button
-              onClick={send}
-              className={classes.sendButton}
-              variant="contained"
-              color="primary"
-              disabled={sending_transaction}
-            >
-              <Trans>Send</Trans>
-            </Button>
-          </Box>
-        </Box>
-      </Grid>
+          </Grid>
+          <Grid xs={12} item>
+            <Flex justifyContent="flex-end" gap={1}>
+              {!!config.local_test && (
+                <Button onClick={farm} variant="outlined">
+                  <Trans>Farm</Trans>
+                </Button>
+              )}
+
+              <Button
+                variant="contained"
+                color="primary"
+                type="submit"
+                disabled={sending_transaction}
+              >
+                <Trans>Send</Trans>
+              </Button>
+            </Flex>
+          </Grid>
+        </Grid>
+      </Form>
     </Card>
   );
 }
@@ -537,66 +414,58 @@ type AddressCardProps = {
 };
 
 function AddressCard(props: AddressCardProps) {
-  const id = props.wallet_id;
-  const address = useSelector(
-    (state: RootState) => state.wallet_state.wallets[id].address,
-  );
-  const classes = useStyles();
-  const dispatch = useDispatch();
+  const { wallet_id } = props;
 
-  function newAddress() {
-    dispatch(get_address(id, true));
+  const dispatch = useDispatch();
+  const wallet = useSelector((state: RootState) =>
+    state.wallet_state.wallets?.find((item) => item.id === wallet_id),
+  );
+
+  if (!wallet) {
+    return null;
   }
 
-  function copy() {
-    navigator.clipboard.writeText(address);
+  const { address } = wallet;
+
+  function newAddress() {
+    dispatch(get_address(wallet_id, true));
   }
 
   return (
-    <Card 
+    <Card
       title={<Trans>Receive Address</Trans>}
-      tooltip={(
+      action={
+        <Button onClick={newAddress} variant="outlined">
+          <Trans>New Address</Trans>
+        </Button>
+      }
+      tooltip={
         <Trans>
-          HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key.
+          HD or Hierarchical Deterministic keys are a type of public key/private
+          key scheme where one private key can have a nearly infinite number of
+          different public keys (and therefor wallet receive addresses) that
+          will all ultimately come back to and be spendable by a single private
+          key.
         </Trans>
-      )}
+      }
     >
       <Grid item xs={12}>
         <Box display="flex">
           <Box flexGrow={1}>
             <TextField
-              disabled
-              fullWidth
               label={<Trans>Address</Trans>}
               value={address}
-              variant="outlined"
+              variant="filled"
+              InputProps={{
+                readOnly: true,
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <CopyToClipboard value={address} />
+                  </InputAdornment>
+                ),
+              }}
+              fullWidth
             />
-          </Box>
-          <Box>
-            <Button
-              onClick={copy}
-              className={classes.copyButton}
-              variant="contained"
-              color="secondary"
-              disableElevation
-            >
-              <Trans>Copy</Trans>
-            </Button>
-          </Box>
-        </Box>
-      </Grid>
-      <Grid item xs={12}>
-        <Box display="flex">
-          <Box flexGrow={1} />
-          <Box>
-            <Button
-              onClick={newAddress}
-              className={classes.sendButton}
-              variant="contained"
-              color="primary"
-            >
-              <Trans>New Address</Trans>
-            </Button>
           </Box>
         </Box>
       </Grid>
@@ -609,19 +478,70 @@ type StandardWalletProps = {
 };
 
 export default function StandardWallet(props: StandardWalletProps) {
-  const id = props.wallet_id;
-  const wallets = useSelector((state: RootState) => state.wallet_state.wallets);
+  const { wallet_id } = props;
+  const dispatch = useDispatch();
+  const openDialog = useOpenDialog();
 
-  if (wallets.length > props.wallet_id) {
-    return (
-      <Flex flexDirection="column" gap={3}>
-        <BalanceCard wallet_id={id} />
-        <SendCard wallet_id={id} />
-        <AddressCard wallet_id={id} />
-        <WalletHistory walletId={id} />
-      </Flex>
+  async function handleDeleteUnconfirmedTransactions() {
+    const deleteConfirmed = await openDialog(
+      <ConfirmDialog
+        title={<Trans>Confirmation</Trans>}
+        confirmTitle={<Trans>Delete</Trans>}
+        confirmColor="danger"
+      >
+        <Trans>Are you sure you want to delete unconfirmed transactions?</Trans>
+      </ConfirmDialog>,
     );
+
+    // @ts-ignore
+    if (deleteConfirmed) {
+      dispatch(deleteUnconfirmedTransactions(wallet_id));
+    }
   }
 
-  return null;
+  return (
+    <Flex flexDirection="column" gap={1}>
+      <Flex gap={1} alignItems="center">
+        <Flex flexGrow={1}>
+          <Typography variant="h5" gutterBottom>
+            <Trans>DogeChia Wallet</Trans>
+          </Typography>
+        </Flex>
+        <More>
+          {({ onClose }) => (
+            <Box>
+              <MenuItem
+                onClick={() => {
+                  onClose();
+                  handleDeleteUnconfirmedTransactions();
+                }}
+              >
+                <ListItemIcon>
+                  <DeleteIcon />
+                </ListItemIcon>
+                <Typography variant="inherit" noWrap>
+                  <Trans>Delete Unconfirmed Transactions</Trans>
+                </Typography>
+              </MenuItem>
+            </Box>
+          )}
+        </More>
+      </Flex>
+
+      <Flex flexDirection="column" gap={2}>
+        <Flex gap={1} justifyContent="flex-end">
+          <Typography variant="body1" color="textSecondary">
+            <Trans>Wallet Status:</Trans>
+          </Typography>
+          <WalletStatus height />
+        </Flex>
+        <Flex flexDirection="column" gap={3}>
+          <WalletCards wallet_id={wallet_id} />
+          <SendCard wallet_id={wallet_id} />
+          <AddressCard wallet_id={wallet_id} />
+          <WalletHistory walletId={wallet_id} />
+        </Flex>
+      </Flex>
+    </Flex>
+  );
 }

@@ -273,7 +273,7 @@ export const RecoverDIDWallet = () => {
   function goBack() {
     dispatch(changeCreateWallet(CREATE_DID_WALLET_OPTIONS));
   }
-  
+
   return (
     <div>
       <div className={classes.cardTitle}>
@@ -291,9 +291,7 @@ export const RecoverDIDWallet = () => {
         </Box>
       </div>
       <Dropzone onDrop={handleDrop}>
-        <Trans>
-          Drag and drop offer file
-        </Trans>
+        <Trans>Drag and drop offer file</Trans>
       </Dropzone>
     </div>
   );
