@@ -112,14 +112,14 @@ describe('units', () => {
     });
     it('updates an existing display', () => {
       units.setDisplay('dogechia', {
-        format: '{amount} TXCH',
+        format: '{amount} TXDG',
         fractionDigits: 0,
       });
 
       const result = units.getDisplay('dogechia');
 
       expect(result).toEqual({
-        format: '{amount} TXCH',
+        format: '{amount} TXDG',
         fractionDigits: 0,
       });
     });
