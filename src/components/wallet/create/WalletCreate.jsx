@@ -16,8 +16,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   ArrowBackIos as ArrowBackIosIcon,
-  InvertColors as InvertColorsIcon,
+  InvertColors as InvertColorsIcon
 } from '@material-ui/icons';
+import SpeedIcon from '@material-ui/icons/Speed';
+import PersonIcon from '@material-ui/icons/Person';
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import BackupIcon from '@material-ui/icons/Backup';
+
 import {
   changeCreateWallet,
   ALL_OPTIONS,
@@ -123,13 +128,13 @@ export const MainWalletList = () => {
           </ListItem>
           <ListItem button onClick={select_option_rl}>
             <ListItemIcon>
-              <InvertColorsIcon />
+              <SpeedIcon />
             </ListItemIcon>
             <ListItemText primary={<Trans>Rate Limited</Trans>} />
           </ListItem>
           <ListItem button onClick={select_option_di}>
             <ListItemIcon>
-              <InvertColorsIcon />
+              <PersonIcon />
             </ListItemIcon>
             <ListItemText primary={<Trans>Distributed Identity</Trans>} />
           </ListItem>
@@ -229,13 +234,13 @@ export const RLListItems = () => {
         <List>
           <ListItem button onClick={select_option_admin}>
             <ListItemIcon>
-              <InvertColorsIcon />
+              <SupervisorAccountIcon />
             </ListItemIcon>
             <ListItemText primary={<Trans>Create admin wallet</Trans>} />
           </ListItem>
           <ListItem button onClick={select_option_user}>
             <ListItemIcon>
-              <InvertColorsIcon />
+              <PersonIcon />
             </ListItemIcon>
             <ListItemText primary={<Trans>Create user wallet</Trans>} />
           </ListItem>
@@ -281,15 +286,15 @@ export const DIDListItems = () => {
         <List>
           <ListItem button onClick={select_option_create}>
             <ListItemIcon>
-              <InvertColorsIcon />
+              <PersonIcon />
             </ListItemIcon>
-            <ListItemText primary={<Trans>Create DID wallet</Trans>} />
+            <ListItemText primary={<Trans>Create wallet</Trans>} />
           </ListItem>
           <ListItem button onClick={select_option_recover}>
             <ListItemIcon>
-              <InvertColorsIcon />
+              <BackupIcon />
             </ListItemIcon>
-            <ListItemText primary={<Trans>Recover DID wallet</Trans>} />
+            <ListItemText primary={<Trans>Recover wallet</Trans>} />
           </ListItem>
         </List>
       </Grid>
