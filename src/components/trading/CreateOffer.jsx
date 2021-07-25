@@ -79,15 +79,16 @@ export default function CreateOffer() {
       );
       return;
     }
+    
     const mojo =
-      wallets[wallet_id.value].type === COLOURED_COIN
+      wallets[wallet_id.value-1].type === COLOURED_COIN
         ? colouredcoin_to_mojo(amount_input.value)
         : dogechia_to_mojo(amount_input.value);
 
     const trade =
       buy_or_sell.value === 1
-        ? newBuy(mojo, wallet_id.value)
-        : newSell(mojo, wallet_id.value);
+        ? newBuy(mojo, wallet_id.value-1)
+        : newSell(mojo, wallet_id.value-1);
 
     dispatch(addTrade(trade));
   }
