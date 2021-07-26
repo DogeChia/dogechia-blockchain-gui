@@ -229,8 +229,7 @@ const IncompleteCard = (props) => {
 
   const dispatch = useDispatch();
   const data = useSelector((state) => state.wallet_state.wallets[id - 1].data);
-  const data_parsed = JSON.parse(data);
-  const pubkey = data_parsed.user_pubkey;
+  const pubkey = data.user_pubkey;
 
   function copy() {
     navigator.clipboard.writeText(pubkey);
@@ -358,12 +357,7 @@ const RLDetailsCard = (props) => {
   const id = props.wallet_id;
 
   const data = useSelector((state) => state.wallet_state.wallets[id - 1].data);
-  const data_parsed = JSON.parse(data);
-  const { type } = data_parsed;
-  const { user_pubkey } = data_parsed;
-  const { admin_pubkey } = data_parsed;
-  const { interval } = data_parsed;
-  const { limit } = data_parsed;
+  const { type, user_pubkey, admin_pubkey, interval, limit } = data;
   const origin = data_parsed.rl_origin;
   const origin_string = JSON.stringify(origin);
   const infopacket = {
@@ -506,8 +500,8 @@ const BalanceCardSubSection = (props) => {
                 <HelpIcon style={{ color: '#c8c8c8', fontSize: 12 }} />
               </Tooltip>
             ) : (
-              ''
-            )}
+                ''
+              )}
           </Typography>
         </Box>
         <Box>
@@ -750,10 +744,9 @@ const SendCard = (props) => {
 export default function RateLimitedWallet(props) {
   const id = useSelector((state) => state.wallet_menu.id);
   const wallets = useSelector((state) => state.wallet_state.wallets ?? []);
+  console.log(`${JSON.stringify(wallets[id - 1].data)}`)
   const data = useSelector((state) => state.wallet_state.wallets[id - 1].data);
-  const data_parsed = JSON.parse(data);
-  const { type } = data_parsed;
-  const initStatus = data_parsed.initialized;
+  const { type, initStatus } = data;
 
   if (wallets.length >= props.wallet_id) {
     if (type === 'user') {
