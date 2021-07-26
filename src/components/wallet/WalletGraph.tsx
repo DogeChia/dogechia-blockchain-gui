@@ -301,7 +301,7 @@ export default function WalletGraph(props: Props) {
         enableGridY={false}
         enableArea
       />
-      {/*
+      {/* 
       <StyledMaxTypography variant="body2" color="textSecondary">
         <FormatLargeNumber value={max} />
       </StyledMaxTypography>

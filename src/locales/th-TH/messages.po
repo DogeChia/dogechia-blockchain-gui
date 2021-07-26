@@ -15,7 +15,7 @@ msgstr ""
 "X-Crowdin-Project: dogechia-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: th\n"
-"X-Crowdin-File: /[DogeChia-Network.dogechia-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[DogeChia.dogechia-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -23,8 +23,8 @@ msgid "(Optional)"
 msgstr ""
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore DogeChia’s blocks further? Check out <0>Chia Explorer</0> built by an open source developer."
-msgstr "*อยากสำรวจบล็อกของ DogeChia มากกว่านี้หรือ? ลองเข้าไปดู <0>Chia Explorer</0> ที่ถูกสร้างโดยนักพัฒนาโอเพนซอร์ซสิ"
+msgid "*Want to explore DogeChia’s blocks further? Check out <0>DogeChia Explorer</0> built by an open source developer."
+msgstr "*อยากสำรวจบล็อกของ DogeChia มากกว่านี้หรือ? ลองเข้าไปดู <0>DogeChia Explorer</0> ที่ถูกสร้างโดยนักพัฒนาโอเพนซอร์ซสิ"
 
 #: src/components/plot/add/PlotAddNFT.tsx:127
 msgid "+ Add New Plot NFT"
@@ -309,16 +309,16 @@ msgid "Chat on KeyBase"
 msgstr "แชทบน KeyBase"
 
 #: src/electron/main.tsx:419
-msgid"DogeChia"
-msgstr"DogeChia"
+msgid "DogeChia"
+msgstr "DogeChia"
 
 #: src/electron/main.tsx:358
-msgid"DogeChia Blockchain Wiki"
-msgstr"DogeChia Blockchain Wiki"
+msgid "DogeChia Blockchain Wiki"
+msgstr "DogeChia Blockchain Wiki"
 
 #: src/components/wallet/standard/WalletStandard.tsx:647
-msgid"DogeChia Wallet"
-msgstr"DogeChia Wallet"
+msgid "DogeChia Wallet"
+msgstr "DogeChia Wallet"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
 msgid "Choose Number of Plots"
@@ -1249,7 +1249,7 @@ msgid "Not found Plots"
 msgstr "ไม่เจอพล็อต"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:186
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XDG reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
 msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:115
@@ -1906,7 +1906,7 @@ msgstr "ช่วงความกว้างของการจ่าย (�
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:401
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:448
 msgid "Spending Limit (dogechia per interval): {0}"
-msgstr "จำกัดการจ่าย (Chia ต่อช่วงเวลา) : {0}"
+msgstr "จำกัดการจ่าย (DogeChia ต่อช่วงเวลา) : {0}"
 
 #: src/components/fullNode/FullNode.jsx:100
 msgid "State"
@@ -2161,7 +2161,7 @@ msgstr "การแลกเปลี่ยนนี้ได้ถูกรว
 
 #: src/components/app/AppTimeBombAlert.tsx:19
 msgid "This version of DogeChia is no longer compatible with the blockchain and can not safely farm."
-msgstr"DogeChia รุ่นนี้ล้าสมัย และไม่สามารถเข้ากันได้กับ Blockchain รวมถึงไม่สามารถ Farm ได้อีกต่อไป"
+msgstr "DogeChia รุ่นนี้ล้าสมัย และไม่สามารถเข้ากันได้กับ Blockchain รวมถึงไม่สามารถ Farm ได้อีกต่อไป"
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"

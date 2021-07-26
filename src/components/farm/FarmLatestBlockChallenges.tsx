@@ -68,7 +68,7 @@ export default function FarmLatestBlockChallenges() {
             href="https://dogechia.posat.io/"
             target="_blank"
           >
-            Chia Explorer
+            DogeChia Explorer
           </Link>{' '}
           built by an open source developer.
         </Trans>

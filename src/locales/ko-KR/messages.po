@@ -15,7 +15,7 @@ msgstr ""
 "X-Crowdin-Project: dogechia-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: ko\n"
-"X-Crowdin-File: /[DogeChia-Network.dogechia-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[DogeChia.dogechia-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -23,8 +23,8 @@ msgid "(Optional)"
 msgstr ""
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore DogeChia’s blocks further? Check out <0>Chia Explorer</0> built by an open source developer."
-msgstr "DogeChia의 블록을 더 탐험하고 싶으십니까? 오픈 소스 개발자가 만든 <0>Chia Explorer</0>를 확인하세요."
+msgid "*Want to explore DogeChia’s blocks further? Check out <0>DogeChia Explorer</0> built by an open source developer."
+msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
@@ -42,10 +42,10 @@ msgstr "128의 버킷을 권장합니다."
 msgid "A harvester is a service running on a machine where plot(s) are actually stored. A farmer and harvester talk to a full node to see the state of the chain. View your network of connected harvesters below Learn more"
 msgstr "수확기는 플롯이 실제 저장되어 구동되는 기기입니다. 파머와 수확기는 전체 체인의 상황을 풀 노드를 통해 확인합니다. 아래의 더 보기 버튼을 눌러, 네트워크에 연결된 수확기를 확인하십시오."
 
-#: src/electron/main.tsx:422
-#: src/electron/main.tsx:509
+#: src/electron/main.tsx:423
+#: src/electron/main.tsx:510
 msgid "About DogeChia Blockchain"
-msgstr "치아 블록체인에 대하여"
+msgstr ""
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -80,9 +80,9 @@ msgstr "플롯 디렉토리를 추가"
 msgid "Add Plot to Queue"
 msgstr "플롯을 대기열에 추가"
 
-#: src/components/wallet/Wallets.tsx:88
-#~ msgid "Add Wallet"
-#~ msgstr "Add Wallet"
+#: src/components/wallet/Wallets.tsx:100
+msgid "Add Wallet"
+msgstr "Add Wallet"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:46
 #: src/components/plot/PlotHeader.tsx:63
@@ -111,12 +111,12 @@ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:561
 #: src/components/wallet/coloured/WalletColoured.tsx:657
-#: src/components/wallet/standard/WalletStandard.tsx:596
+#: src/components/wallet/standard/WalletStandard.tsx:456
 msgid "Address"
 msgstr "주소"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:701
-#: src/components/wallet/standard/WalletStandard.tsx:503
+#: src/components/wallet/standard/WalletStandard.tsx:363
 msgid "Address / Puzzle hash"
 msgstr "주소 / 퍼즐 해시"
 
@@ -126,7 +126,7 @@ msgstr "주소 / 퍼즐 해시"
 #: src/components/wallet/WalletHistory.tsx:62
 #: src/components/wallet/create/createNewColouredCoin.jsx:119
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:720
-#: src/components/wallet/standard/WalletStandard.tsx:513
+#: src/components/wallet/standard/WalletStandard.tsx:373
 msgid "Amount"
 msgstr "금액"
 
@@ -144,7 +144,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "정말로 플롯을 삭제하시겠습니까? 삭제된 플롯은 복구되지 않습니다."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:122
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:492
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgstr "백업된 파일은 스마트 월렛을 복구하는데 사용됩니다.
 msgid "Balance"
 msgstr "잔고"
 
-#: src/components/block/Block.jsx:301
+#: src/components/block/Block.jsx:290
 msgid "Base Farmer Reward Amount"
 msgstr "파밍에 대한 보상 지급의 최소 금액"
 
@@ -200,34 +200,34 @@ msgstr "지난 24시간 동안의 최적 예측값입니다."
 #~ msgid "Best estimate over last 5 hours"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:129
-#: src/components/block/Block.jsx:153
-#: src/components/block/Block.jsx:157
-#: src/components/block/Block.jsx:316
+#: src/components/block/Block.jsx:112
+#: src/components/block/Block.jsx:146
+#: src/components/block/Block.jsx:151
+#: src/components/block/Block.jsx:306
 msgid "Block"
 msgstr "블록"
 
-#: src/components/block/Block.jsx:137
+#: src/components/block/Block.jsx:124
 msgid "Block Test"
 msgstr "블록 테스트"
 
-#: src/components/block/Block.jsx:235
+#: src/components/block/Block.jsx:230
 msgid "Block VDF Iterations"
 msgstr "블록 VDF 반복"
 
-#: src/components/block/Block.jsx:320
+#: src/components/block/Block.jsx:311
 msgid "Block at height {0} in the DogeChia blockchain"
-msgstr "DogeChia 블록체인 높이 {0} 에 있는 블록"
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:141
+#: src/components/block/Block.jsx:129
 msgid "Block with hash {headerHash}"
 msgstr "해쉬 {headerHash} 의 블록"
 
-#: src/components/block/Block.jsx:162
+#: src/components/block/Block.jsx:158
 msgid "Block with hash {headerHash} does not exist."
 msgstr "{headerHash} 에 해당하는 블록이 존재하지 않습니다."
 
@@ -255,9 +255,9 @@ msgstr "하지만 당신은 현재 <0/>을 파밍하고 있습니다."
 msgid "Buy"
 msgstr "매수"
 
-#: src/components/wallet/Wallets.tsx:49
-#~ msgid "CC Wallet"
-#~ msgstr "CC Wallet"
+#: src/components/wallet/Wallets.tsx:61
+msgid "CC Wallet"
+msgstr "CC Wallet"
 
 #: src/components/wallet/create/WalletCreate.jsx:182
 #~ msgid "CCListItems.title"
@@ -304,17 +304,13 @@ msgstr ""
 msgid "Change Pool"
 msgstr ""
 
-#: src/electron/main.tsx:401
+#: src/electron/main.tsx:402
 msgid "Chat on Discord"
 msgstr ""
 
 #: src/electron/main.tsx:401
 #~ msgid "Chat on KeyBase"
 #~ msgstr "키베이스에서 채팅하기"
-
-#: src/components/wallet/standard/WalletStandard.tsx:647
-msgid "Chia Wallet"
-msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
 msgid "Choose Number of Plots"
@@ -351,7 +347,7 @@ msgstr "컬러"
 msgid "Colour Info"
 msgstr "컬러 정보"
 
-#: src/components/wallet/create/createExistingColouredCoin.jsx:112
+#: src/components/wallet/create/createExistingColouredCoin.jsx:110
 msgid "Colour String"
 msgstr "컬러 문자열"
 
@@ -378,7 +374,7 @@ msgid "Confirm Disconnect"
 msgstr "연결 해제 확인"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:118
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:488
 msgid "Confirmation"
 msgstr ""
 
@@ -416,7 +412,7 @@ msgstr "지갑 연결"
 msgid "Connection Status"
 msgstr "연결 상태"
 
-#: src/components/farm/FarmFullNodeConnections.tsx:111
+#: src/components/farm/FarmFullNodeConnections.tsx:112
 #: src/components/farm/FarmYourHarvesterNetwork.tsx:109
 msgid "Connection Status:"
 msgstr "연결 상태:"
@@ -429,7 +425,7 @@ msgstr "연결 유형"
 msgid "Connections"
 msgstr "연결"
 
-#: src/electron/main.tsx:382
+#: src/electron/main.tsx:383
 msgid "Contribute on GitHub"
 msgstr "GitHub에서 기여"
 
@@ -451,7 +447,7 @@ msgstr "클립보드에 복사"
 #: src/components/backup/BackupCreate.tsx:78
 #: src/components/plot/add/PlotAdd.tsx:177
 #: src/components/plotNFT/select/PlotNFTSelectPool.tsx:175
-#: src/components/wallet/create/createExistingColouredCoin.jsx:135
+#: src/components/wallet/create/createExistingColouredCoin.jsx:133
 #: src/components/wallet/create/createNewColouredCoin.jsx:142
 #: src/components/wallet/create/createRLAdmin.jsx:307
 #: src/components/wallet/create/createRLUser.jsx:99
@@ -488,7 +484,7 @@ msgstr "거래 제안 만들기"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:543
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:684
-#: src/components/wallet/standard/WalletStandard.tsx:483
+#: src/components/wallet/standard/WalletStandard.tsx:343
 msgid "Create Transaction"
 msgstr "거래 생성하기"
 
@@ -516,7 +512,7 @@ msgstr "새로운 컬러 코인 생성"
 msgid "Create user wallet"
 msgstr "사용자 지갑 만들기"
 
-#: src/components/wallet/create/createExistingColouredCoin.jsx:95
+#: src/components/wallet/create/createExistingColouredCoin.jsx:93
 msgid "Create wallet for colour"
 msgstr "컬러 코인을 위한 지갑 생성"
 
@@ -566,9 +562,9 @@ msgstr "현재 거래 상태"
 msgid "DANGER: permanently delete private key"
 msgstr "경고: 영구적으로 개인 키를 삭제합니다."
 
-#: src/components/wallet/Wallets.tsx:53
-#~ msgid "DID Wallet"
-#~ msgstr "DID Wallet"
+#: src/components/wallet/Wallets.tsx:65
+msgid "DID Wallet"
+msgstr "DID Wallet"
 
 #: src/components/wallet/create/WalletCreate.jsx:310
 #~ msgid "DIDListItems.title"
@@ -591,7 +587,7 @@ msgstr "지연"
 #: src/components/plotNFT/PlotNFTCard.tsx:119
 #: src/components/selectKey/SelectKey.tsx:59
 #: src/components/selectKey/SelectKey.tsx:80
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:489
 msgid "Delete"
 msgstr "삭제"
 
@@ -601,7 +597,7 @@ msgid "Delete Plot"
 msgstr "플롯 삭제"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:314
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:523
 msgid "Delete Unconfirmed Transactions"
 msgstr ""
 
@@ -622,15 +618,15 @@ msgstr "모든 키를 컴퓨터에서 영구적으로 제거합니다. 만일을
 msgid "Deleting the key will permanently remove the key from your computer, make sure you have backups. Are you sure you want to continue?"
 msgstr "이 키를 컴퓨터에서 영구적으로 삭제합니다. 만일을 대비하여 백업이 되어 있는지 확인하십시오. 계속하시겠습니까?"
 
-#: src/electron/main.tsx:304
+#: src/electron/main.tsx:305
 msgid "Developer"
 msgstr "개발자"
 
-#: src/electron/main.tsx:307
+#: src/electron/main.tsx:308
 msgid "Developer Tools"
 msgstr "개발자 도구"
 
-#: src/components/block/Block.jsx:221
+#: src/components/block/Block.jsx:216
 #: src/components/fullNode/card/FullNodeCardDifficulty.tsx:20
 msgid "Difficulty"
 msgstr "난이도"
@@ -668,28 +664,29 @@ msgstr "이 장치에 플롯 파일이 있습니까? <0>플롯 경로 추가하�
 msgid "Does your machine support parallel plotting?"
 msgstr "이 장치가 병렬 플로팅을 지원합니까?"
 
-#: src/electron/main.tsx:419
+#: src/electron/main.tsx:420
 msgid "DogeChia"
-msgstr "치아"
+msgstr ""
 
-#: src/electron/main.tsx:358
+#: src/electron/main.tsx:359
 msgid "DogeChia Blockchain Wiki"
-msgstr "치아 블록체인 위키"
+msgstr ""
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
-#~ msgid "DogeChia Wallet"
-#~ msgstr "치아 지갑"
+#: src/components/wallet/Wallets.tsx:58
+#: src/components/wallet/standard/WalletStandard.tsx:507
+msgid "DogeChia Wallet"
+msgstr ""
 
 #: src/components/trading/ViewOffer.jsx:39
 #: src/components/wallet/create/recoverDIDWallet.js:294
 msgid "Drag and drop offer file"
 msgstr "거래 파일을 끌어서 여기에 놓으세요"
 
-#: src/components/backup/BackupRestore.tsx:173
+#: src/components/backup/BackupRestore.tsx:172
 msgid "Drag and drop your backup file"
 msgstr "백업 파일을 끌어 놓으세요"
 
-#: src/electron/main.tsx:263
+#: src/electron/main.tsx:264
 msgid "Edit"
 msgstr "편집"
 
@@ -707,7 +704,7 @@ msgstr "치아 지갑을 복구하기 위해서 24자로 된 니모닉 단어를
 msgid "Error"
 msgstr "오류"
 
-#: src/components/wallet/standard/WalletStandard.tsx:456
+#: src/components/wallet/standard/WalletStandard.tsx:317
 msgid "Error: Cannot send dogechia to coloured address. Please enter a dogechia address."
 msgstr "에러: 치아를 컬러드 주소로 보낼 수 없습니다. 치아 주소를 입력하세요."
 
@@ -741,9 +738,9 @@ msgstr "최종 경로 없이 플롯 만들기"
 msgid "Failed to open (invalid plots)"
 msgstr "플롯 열기에 실패했습니다. (사유: 유효하지 않은 플롯)"
 
-#: src/components/dashboard/DashboardSideBar.tsx:55
+#: src/components/dashboard/DashboardSideBar.tsx:56
 #: src/components/wallet/coloured/WalletColoured.tsx:610
-#: src/components/wallet/standard/WalletStandard.tsx:532
+#: src/components/wallet/standard/WalletStandard.tsx:392
 msgid "Farm"
 msgstr "농장"
 
@@ -751,7 +748,7 @@ msgstr "농장"
 msgid "Farmer Public Key"
 msgstr "파머 공개 키"
 
-#: src/components/block/Block.jsx:267
+#: src/components/block/Block.jsx:252
 msgid "Farmer Puzzle Hash"
 msgstr "수확기 퍼즐 해시"
 
@@ -809,12 +806,12 @@ msgstr "수확 상태"
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:147
 #: src/components/pool/PoolInfo.tsx:17
 #: src/components/wallet/WalletHistory.tsx:66
-#: src/components/wallet/create/createExistingColouredCoin.jsx:125
+#: src/components/wallet/create/createExistingColouredCoin.jsx:123
 #: src/components/wallet/create/createNewColouredCoin.jsx:132
 #: src/components/wallet/create/createRLAdmin.jsx:244
 #: src/components/wallet/create/createRLAdmin.jsx:272
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:733
-#: src/components/wallet/standard/WalletStandard.tsx:524
+#: src/components/wallet/standard/WalletStandard.tsx:384
 msgid "Fee"
 msgstr "수수료"
 
@@ -830,7 +827,7 @@ msgstr "수수료"
 msgid "Fee ({currencyCode})"
 msgstr "수수료 ({currencyCode})"
 
-#: src/components/block/Block.jsx:305
+#: src/components/block/Block.jsx:294
 msgid "Fees Amount"
 msgstr "수수료 금액"
 
@@ -838,8 +835,8 @@ msgstr "수수료 금액"
 #~ msgid "Fees Puzzle Hash"
 #~ msgstr ""
 
-#: src/electron/main.tsx:255
-#: src/electron/main.tsx:456
+#: src/electron/main.tsx:256
+#: src/electron/main.tsx:457
 msgid "File"
 msgstr "파일"
 
@@ -858,15 +855,15 @@ msgstr "최종 폴더 위치"
 msgid "Finished"
 msgstr "완료됨"
 
-#: src/electron/main.tsx:407
+#: src/electron/main.tsx:408
 msgid "Follow on Twitter"
 msgstr "트위터 팔로우하기"
 
-#: src/electron/main.tsx:366
+#: src/electron/main.tsx:367
 msgid "Frequently Asked Questions"
 msgstr "자주 묻는 질문"
 
-#: src/components/dashboard/DashboardSideBar.tsx:39
+#: src/components/dashboard/DashboardSideBar.tsx:40
 #: src/components/fullNode/FullNode.jsx:323
 msgid "Full Node"
 msgstr "전체 노드"
@@ -879,7 +876,7 @@ msgstr ""
 #~ msgid "Full Node Status"
 #~ msgstr "Full Node Status"
 
-#: src/electron/main.tsx:332
+#: src/electron/main.tsx:333
 msgid "Full Screen"
 msgstr "전체 화면"
 
@@ -895,7 +892,7 @@ msgstr "새로운 컬러 만들기"
 msgid "Grid view"
 msgstr ""
 
-#: src/components/wallet/standard/WalletStandard.tsx:583
+#: src/components/wallet/standard/WalletStandard.tsx:443
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "HD키, 또는 \"계층구조 결정성 키\" 라고 부르는 이것은 개인 키 하나에 무한대에 가까운 공개키를 가질 수 있는 공개키 암호화 방식으로, 시드를 안전하게 보관하기만 한다면 언제든 시드로부터 개인키를 순차적으로 재생성할 수 있다는 장점을 지니고 있습니다."
 
@@ -911,17 +908,17 @@ msgstr ""
 msgid "Header Hash"
 msgstr "헤더 해시"
 
-#: src/components/block/Block.jsx:185
+#: src/components/block/Block.jsx:180
 msgid "Header hash"
 msgstr "해더 해시"
 
-#: src/components/block/Block.jsx:201
+#: src/components/block/Block.jsx:194
 #: src/components/fullNode/FullNode.jsx:81
 #: src/components/fullNode/FullNodeConnections.tsx:79
 msgid "Height"
 msgstr "높이"
 
-#: src/electron/main.tsx:354
+#: src/electron/main.tsx:355
 msgid "Help"
 msgstr "도움말"
 
@@ -1038,7 +1035,7 @@ msgstr ""
 msgid "K-Size"
 msgstr "K-크기"
 
-#: src/components/dashboard/DashboardSideBar.tsx:66
+#: src/components/dashboard/DashboardSideBar.tsx:72
 msgid "Keys"
 msgstr "키"
 
@@ -1082,8 +1079,8 @@ msgid "Loading Plot NFTs"
 msgstr ""
 
 #: src/components/wallet/Wallets.tsx:172
-msgid "Loading list of wallets"
-msgstr ""
+#~ msgid "Loading list of wallets"
+#~ msgstr ""
 
 #: src/components/plot/queue/PlotQueueLogDialog.tsx:41
 msgid "Loading..."
@@ -1178,7 +1175,7 @@ msgstr "네트워크 이름"
 #~ msgstr "Network not launched yet, waiting for genesis challenge!"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:685
-#: src/components/wallet/standard/WalletStandard.tsx:579
+#: src/components/wallet/standard/WalletStandard.tsx:439
 msgid "New Address"
 msgstr "새 주소"
 
@@ -1186,7 +1183,7 @@ msgstr "새 주소"
 msgid "New Wallet"
 msgstr "새 지갑"
 
-#: src/components/block/Block.jsx:335
+#: src/components/block/Block.jsx:325
 #: src/components/wallet/WalletAdd.tsx:95
 #: src/components/wallet/WalletImport.tsx:163
 msgid "Next"
@@ -1265,7 +1262,7 @@ msgid "Not found Plots"
 msgstr "플롯을 찾지 못했습니다"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:184
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XDG reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
 msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:120
@@ -1295,7 +1292,7 @@ msgstr "거래 제안"
 msgid "Offers Created"
 msgstr "거래 주문이 생성되었습니다."
 
-#: src/components/wallet/standard/WalletStandard.tsx:485
+#: src/components/wallet/standard/WalletStandard.tsx:345
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "당신이 보낸 트랜잭션(이체) 주문이 1분 이내로 처리된다고 느끼겠지만, 평균적으로는 각 트랜잭션 블록은 1분 정도의 차이를 두고 있습니다."
 
@@ -1354,7 +1351,7 @@ msgstr "유효한 초기 코인의 양을 입럭하십시오"
 
 #: src/components/wallet/create/createNewColouredCoin.jsx:69
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:639
-#: src/components/wallet/standard/WalletStandard.tsx:432
+#: src/components/wallet/standard/WalletStandard.tsx:293
 msgid "Please enter a valid numeric amount"
 msgstr "유효한 수의 양을 입력하십시오"
 
@@ -1362,7 +1359,7 @@ msgstr "유효한 수의 양을 입력하십시오"
 #: src/components/wallet/create/createNewColouredCoin.jsx:79
 #: src/components/wallet/create/createRLAdmin.jsx:150
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:649
-#: src/components/wallet/standard/WalletStandard.tsx:444
+#: src/components/wallet/standard/WalletStandard.tsx:305
 msgid "Please enter a valid numeric fee"
 msgstr "유효한 수의 수수료를 입력하십시오"
 
@@ -1379,7 +1376,7 @@ msgid "Please enter a valid pubkey"
 msgstr "유효한 공개 키를 입력하십시오"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:623
-#: src/components/wallet/standard/WalletStandard.tsx:420
+#: src/components/wallet/standard/WalletStandard.tsx:281
 msgid "Please finish syncing before making a transaction"
 msgstr "거래 주문을 하기 위해서는 동기화가 완료되어야 합니다."
 
@@ -1426,7 +1423,7 @@ msgstr "플롯"
 msgid "Plot Count"
 msgstr "플롯 수"
 
-#: src/components/block/Block.jsx:283
+#: src/components/block/Block.jsx:268
 msgid "Plot Id"
 msgstr "플롯 ID"
 
@@ -1447,7 +1444,7 @@ msgstr ""
 #~ msgid "Plot Name"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:259
+#: src/components/block/Block.jsx:244
 msgid "Plot Public Key"
 msgstr "구성 공개 키"
 
@@ -1475,7 +1472,7 @@ msgstr "{0} 의 복제된 구성"
 msgid "PlotNFT is transitioning to (target state). This can take a while. Please do not close the application until this is finalized."
 msgstr ""
 
-#: src/components/dashboard/DashboardSideBar.tsx:50
+#: src/components/dashboard/DashboardSideBar.tsx:51
 msgid "Plots"
 msgstr "플롯"
 
@@ -1485,7 +1482,7 @@ msgstr "필터 통과된 구성들"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:35
 msgid "Plots are allocated space on your hard drive used to farm and earn DogeChia. <0>Learn more</0>"
-msgstr "구성들은 나의 하드 드라이브에 적재되어 DogeChia를 채굴하고 모읍니다. <0>더보기</0>"
+msgstr "구성들은 나의 하드 드라이브에 적재되어 Chia를 채굴하고 모읍니다. <0>더보기</0>"
 
 #: src/components/plot/queue/PlotQueueIndicator.tsx:34
 msgid "Plotting"
@@ -1518,7 +1515,7 @@ msgstr ""
 msgid "Points Successful in Last 24 Hours"
 msgstr ""
 
-#: src/components/dashboard/DashboardSideBar.tsx:60
+#: src/components/dashboard/DashboardSideBar.tsx:66
 #: src/components/pool/Pool.tsx:25
 msgid "Pool"
 msgstr ""
@@ -1540,12 +1537,12 @@ msgstr ""
 msgid "Pool Payout Instructions"
 msgstr ""
 
-#: src/components/block/Block.jsx:263
+#: src/components/block/Block.jsx:248
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:222
 msgid "Pool Public Key"
 msgstr "풀 퍼블릭 키"
 
-#: src/components/block/Block.jsx:275
+#: src/components/block/Block.jsx:260
 msgid "Pool Puzzle Hash"
 msgstr "풀 퍼즐 해시"
 
@@ -1565,7 +1562,7 @@ msgstr ""
 msgid "Pool Reward Address must not be empty."
 msgstr ""
 
-#: src/components/block/Block.jsx:297
+#: src/components/block/Block.jsx:286
 msgid "Pool Reward Amount"
 msgstr "풀 보상량"
 
@@ -1608,7 +1605,7 @@ msgstr ""
 msgid "Preparing standard wallet"
 msgstr ""
 
-#: src/components/block/Block.jsx:332
+#: src/components/block/Block.jsx:320
 msgid "Previous"
 msgstr "이전"
 
@@ -1616,7 +1613,7 @@ msgstr "이전"
 #~ msgid "Previous Block Hash"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:215
+#: src/components/block/Block.jsx:208
 msgid "Previous Header Hash"
 msgstr "이전 해더 해시"
 
@@ -1636,7 +1633,7 @@ msgstr "개인 키 {0}"
 msgid "Private key:"
 msgstr "개인 키:"
 
-#: src/components/block/Block.jsx:251
+#: src/components/block/Block.jsx:240
 msgid "Proof of Space Size"
 msgstr "공간 크기 증명"
 
@@ -1676,9 +1673,9 @@ msgstr "대기중"
 msgid "RAM max usage"
 msgstr "최대 RAM 사용량"
 
-#: src/components/wallet/Wallets.tsx:51
-#~ msgid "RL Wallet"
-#~ msgstr "RL Wallet"
+#: src/components/wallet/Wallets.tsx:63
+msgid "RL Wallet"
+msgstr "RL Wallet"
 
 #: src/components/wallet/create/WalletCreate.jsx:246
 #~ msgid "RLListItems.title"
@@ -1702,7 +1699,7 @@ msgid "Rate Limited User Wallet Setup"
 msgstr "비율 제한 사용자 지갑 설정"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:650
-#: src/components/wallet/standard/WalletStandard.tsx:576
+#: src/components/wallet/standard/WalletStandard.tsx:436
 msgid "Receive Address"
 msgstr "입금 주소"
 
@@ -1719,7 +1716,7 @@ msgstr "Plots 새로고침"
 msgid "Relative Lock Height"
 msgstr ""
 
-#: src/electron/main.tsx:374
+#: src/electron/main.tsx:375
 msgid "Release Notes"
 msgstr "릴리스 노트"
 
@@ -1731,7 +1728,7 @@ msgstr "제거"
 msgid "Rename"
 msgstr "이름 바꾸기"
 
-#: src/electron/main.tsx:393
+#: src/electron/main.tsx:394
 msgid "Report an Issue..."
 msgstr "문제 보고하기..."
 
@@ -1748,7 +1745,7 @@ msgstr "백업에서 컬러 코인 및 기타 스마트 지갑에 대한 메타 
 #~ msgid "SB Height"
 #~ msgstr "SB Height"
 
-#: src/components/backup/BackupRestore.tsx:186
+#: src/components/backup/BackupRestore.tsx:187
 msgid "Safe To Skip"
 msgstr "안전하게 건너 뛰기"
 
@@ -1844,7 +1841,7 @@ msgstr "판매"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:620
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:748
-#: src/components/wallet/standard/WalletStandard.tsx:542
+#: src/components/wallet/standard/WalletStandard.tsx:402
 msgid "Send"
 msgstr "전송"
 
@@ -1893,7 +1890,7 @@ msgstr ""
 msgid "Something went wrong"
 msgstr ""
 
-#: src/electron/main.tsx:470
+#: src/electron/main.tsx:471
 msgid "Speech"
 msgstr "말하다"
 
@@ -1938,7 +1935,7 @@ msgstr "상태"
 #: src/components/trading/TradingOverview.jsx:128
 #: src/components/wallet/WalletHistory.tsx:55
 #: src/components/wallet/WalletStatusCard.tsx:22
-#: src/components/wallet/Wallets.tsx:118
+#: src/components/wallet/Wallets.tsx:125
 msgid "Status"
 msgstr "상태"
 
@@ -2030,11 +2027,11 @@ msgstr ""
 msgid "Temporary folder location"
 msgstr "임시 폴더 경로"
 
-#: src/components/app/AppTimeBomb.tsx:30
+#: src/components/app/AppTimeBomb.tsx:27
 msgid "The application will stop working at block height 193536."
 msgstr "애플리케이션은 블록 높이 193536에서 작업을 멈춥니다."
 
-#: src/components/farm/FarmFullNodeConnections.tsx:97
+#: src/components/farm/FarmFullNodeConnections.tsx:101
 msgid "The full node that your farmer is connected to is below. <0>Learn more</0>"
 msgstr "농부가 연결된 전체 노드는 다음과 같습니다. <0> 자세히 알아보기 </ 0>"
 
@@ -2075,19 +2072,19 @@ msgstr ""
 msgid "The pool switching operation was cancelled, please try again by changing pool, or self pooling"
 msgstr ""
 
-#: src/components/block/Block.jsx:286
+#: src/components/block/Block.jsx:271
 msgid "The seed used to create the plot. This depends on the pool pk and plot pk."
 msgstr "플롯을 만드는 데 사용 된 시드입니다. 이는 풀 pk 및 플롯 pk에 따라 다릅니다."
 
-#: src/components/block/Block.jsx:228
+#: src/components/block/Block.jsx:223
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on the whole chain up to this sub block."
 msgstr "VDF (확인 가능한 지연 함수) 의 전체 수 또는 이 하위 블록까지 전체 체인에 대한 시간 반복의 전체 수 입니다."
 
-#: src/components/block/Block.jsx:244
+#: src/components/block/Block.jsx:233
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on this block."
 msgstr "VDF (확인 가능한 지연 함수) 의 총 수 또는이 블록의 시간 반복 증명입니다."
 
-#: src/components/block/Block.jsx:308
+#: src/components/block/Block.jsx:297
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "이 블록의 총 거래 수수료. 농부에게 보상."
 
@@ -2115,12 +2112,8 @@ msgid "This feature is available only from the GUI."
 msgstr "이 기능은 GUI에서만 사용 가능합니다."
 
 #: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr ""
-
-#: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-#~ msgid "This is the amount of DogeChia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and DogeChia that you have just spent but is not yet in the blockchain."
-#~ msgstr "이것은 거래를하기 위해 현재 사용할 수있는 DogeChia의 양입니다. 여기에는 보류중인 농업 보상, 보류중인 수신 거래 및 방금 지출했지만 아직 블록 체인에 포함되지 않은 DogeChia는 포함되지 않습니다."
+msgid "This is the amount of DogeChia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and DogeChia that you have just spent but is not yet in the blockchain."
+msgstr "이것은 거래를하기 위해 현재 사용할 수있는 Chia의 양입니다. 여기에는 보류중인 농업 보상, 보류중인 수신 거래 및 방금 지출했지만 아직 블록 체인에 포함되지 않은 Chia는 포함되지 않습니다."
 
 #: src/components/wallet/card/WalletCardPendingChange.tsx:26
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -2134,7 +2127,7 @@ msgstr "이것은 들어오고 나가는 보류 트랜잭션의 합계입니다 
 msgid "This is the time of the latest peak sub block."
 msgstr "이것은 최신 피크 서브 블록의 시간입니다."
 
-#: src/components/block/Block.jsx:194
+#: src/components/block/Block.jsx:187
 msgid "This is the time the block was created by the farmer, which is before it is finalized with a proof of time"
 msgstr "이것은 농부가 블록을 만든 시간이며 시간 증명으로 완성되기 전입니다."
 
@@ -2184,9 +2177,9 @@ msgstr "이 거래는 현재 생성되었습니다."
 msgid "This trade was included on blockchain at this block height"
 msgstr "이 거래는이 block height 에서 블록 체인에 포함되었습니다."
 
-#: src/components/app/AppTimeBombAlert.tsx:19
+#: src/components/app/AppTimeBombAlert.tsx:18
 msgid "This version of DogeChia is no longer compatible with the blockchain and can not safely farm."
-msgstr "이 버전의 DogeChia는 더 이상 블록 체인과 호환되지 않으며 안전하게 파밍 할 수 없습니다."
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"
@@ -2196,7 +2189,7 @@ msgstr "생성 시간"
 #~ msgid "Time this trade was created at this time"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:189
+#: src/components/block/Block.jsx:184
 msgid "Timestamp"
 msgstr "타임스탬프"
 
@@ -2230,7 +2223,7 @@ msgstr "전체 플롯의 용량:"
 msgid "Total Size of Plots"
 msgstr "전체 플롯의 용량"
 
-#: src/components/block/Block.jsx:225
+#: src/components/block/Block.jsx:220
 msgid "Total VDF Iterations"
 msgstr "총 VDF 반복"
 
@@ -2238,9 +2231,9 @@ msgstr "총 VDF 반복"
 msgid "Total iterations since the start of the blockchain"
 msgstr "블록체인 시작 후 총 반복"
 
-#: src/components/dashboard/DashboardSideBar.tsx:27
-#~ msgid "Trade"
-#~ msgstr "Trade"
+#: src/components/dashboard/DashboardSideBar.tsx:61
+msgid "Trade"
+msgstr "Trade"
 
 #: src/components/trading/TradingOverview.jsx:350
 msgid "Trade Details"
@@ -2270,7 +2263,7 @@ msgstr "거래"
 msgid "Trading History"
 msgstr "거래내역"
 
-#: src/components/block/Block.jsx:293
+#: src/components/block/Block.jsx:279
 msgid "Transactions Filter Hash"
 msgstr "거래 필터 해시"
 
@@ -2324,7 +2317,7 @@ msgstr ""
 msgid "Verify Pool Details"
 msgstr ""
 
-#: src/electron/main.tsx:295
+#: src/electron/main.tsx:296
 msgid "View"
 msgstr "보기"
 
@@ -2374,7 +2367,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:534
 msgid "Wallet Status:"
 msgstr ""
 
@@ -2406,8 +2399,8 @@ msgstr ""
 #~ msgid "WalletStatusCard.syncing"
 #~ msgstr ""
 
-#: src/components/dashboard/DashboardSideBar.tsx:45
-#: src/components/wallet/Wallets.tsx:173
+#: src/components/dashboard/DashboardSideBar.tsx:46
+#: src/components/wallet/Wallets.tsx:175
 msgid "Wallets"
 msgstr "지갑"
 
@@ -2421,23 +2414,23 @@ msgstr ""
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
 msgid "Want to earn more DogeChia? Add more plots to your farm."
-msgstr "DogeChia를 더 얻고 싶다면, 더 많은 플롯들을 당신의 농장에 추가하세요."
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:86
 msgid "Want to have a delay before the next plot starts?"
 msgstr "다음 플로팅 시작 전 지연시간"
 
-#: src/components/block/Block.jsx:205
+#: src/components/block/Block.jsx:198
 msgid "Weight"
 msgstr "중량"
 
-#: src/components/block/Block.jsx:208
+#: src/components/block/Block.jsx:201
 msgid "Weight is the total added difficulty of all sub blocks up to and including this one"
 msgstr "무게는 이것을 포함하여 모든 서브 블록의 총 추가 난이도입니다."
 
 #: src/components/selectKey/SelectKey.tsx:112
 msgid "Welcome to DogeChia. Please log in with an existing key, or create a new key."
-msgstr "DogeChia에 오신 것을 환영합니다. 사용하고 계신 키로 로그인하시거나 새로운 키를 만드세요."
+msgstr ""
 
 #: src/components/wallet/WalletAdd.tsx:66
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
@@ -2447,7 +2440,7 @@ msgstr "환영합니다. 다음의 단어들은 당신의 지갑 백업에 사�
 msgid "When you receive the setup info packet from your admin, enter it below to complete your Rate Limited Wallet setup:"
 msgstr "관리자로부터 설정 정보 패킷을 받으면 아래에 입력하여 비율 제한 지갑 설정을 완료하세요."
 
-#: src/electron/main.tsx:340
+#: src/electron/main.tsx:341
 msgid "Window"
 msgstr "창"
 
@@ -2526,7 +2519,7 @@ msgstr ""
 msgid "Your Farm Overview"
 msgstr "내 농장 둘러보기"
 
-#: src/components/farm/FarmFullNodeConnections.tsx:95
+#: src/components/farm/FarmFullNodeConnections.tsx:96
 msgid "Your Full Node Connection"
 msgstr "내 풀 노드 연결"
 
@@ -2547,16 +2540,16 @@ msgid "[Error 22] File not found. Most likely one of the plot folders in your co
 msgstr "[오류 22] 파일을 찾을 수 없습니다. config.yaml의 플롯 폴더 중 하나에 문제가 있을 가능성이 높습니다."
 
 #: src/components/wallet/WalletStatusCard.tsx:41
-#: src/components/wallet/Wallets.tsx:143
+#: src/components/wallet/Wallets.tsx:150
 msgid "connections:"
 msgstr "연결:"
 
 #: src/components/wallet/WalletStatusCard.tsx:33
-#: src/components/wallet/Wallets.tsx:135
+#: src/components/wallet/Wallets.tsx:142
 msgid "height:"
 msgstr "높이:"
 
-#: src/components/wallet/Wallets.tsx:129
+#: src/components/wallet/Wallets.tsx:136
 msgid "not synced"
 msgstr "동기화 되지 않음"
 
@@ -2565,17 +2558,17 @@ msgid "p2_singleton_puzzle_hash is not defined"
 msgstr ""
 
 #: src/components/wallet/WalletStatusCard.tsx:27
-#: src/components/wallet/Wallets.tsx:123
+#: src/components/wallet/Wallets.tsx:130
 msgid "status:"
 msgstr "상태:"
 
 #: src/components/wallet/WalletStatusCard.tsx:29
-#: src/components/wallet/Wallets.tsx:128
+#: src/components/wallet/Wallets.tsx:135
 msgid "synced"
 msgstr "동기화됨"
 
 #: src/components/wallet/WalletStatusCard.tsx:29
-#: src/components/wallet/Wallets.tsx:127
+#: src/components/wallet/Wallets.tsx:134
 msgid "syncing"
 msgstr "동기화중"
 
@@ -2597,7 +2590,7 @@ msgstr "{currencyCode} 블록 보상"
 
 #: src/components/farm/card/FarmCardTotalDogeChiaFarmed.tsx:29
 msgid "{currencyCode} Total DogeChia Farmed"
-msgstr "{currencyCode} 채굴된 총 DogeChia"
+msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28
 msgid "{currencyCode} User Transaction Fees"

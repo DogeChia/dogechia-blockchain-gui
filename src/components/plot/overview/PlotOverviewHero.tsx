@@ -38,7 +38,7 @@ export default function PlotOverviewHero() {
               }
               <Link
                 target="_blank"
-                href="https://github.com/DogeChia-Network/dogechia-blockchain/wiki/Network-Architecture"
+                href="https://github.com/DogeChia/dogechia-blockchain/wiki/Network-Architecture"
               >
                 Learn more
               </Link>

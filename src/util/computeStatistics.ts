@@ -55,7 +55,7 @@ export default function computeStatistics(wallets: Wallet[]): {
     });
   });
 
-  const totalDogeChiaFarmed = poolCoins.plus(farmerCoins);
+  const totalChiaFarmed = poolCoins.plus(farmerCoins);
   const totalBlockRewards = Big(poolCoins).times(8).div(7);
   const userTransactionFees = Big(farmerCoins).minus(
     Big(totalBlockRewards).div(8),
@@ -65,7 +65,7 @@ export default function computeStatistics(wallets: Wallet[]): {
     .minus(userTransactionFees);
 
   return {
-    totalDogeChiaFarmed,
+    totalChiaFarmed,
     biggestHeight,
     biggestRewardHeight,
     poolCoins,

@@ -173,7 +173,7 @@ export default function PlotNFTGraph(props: Props) {
             enableArea
           />
 
-          {/*
+          {/* 
         <StyledMaxTypography variant="body2" color="textSecondary">
           <FormatLargeNumber value={max} />
         </StyledMaxTypography>

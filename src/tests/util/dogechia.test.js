@@ -1,34 +1,64 @@
-import React, { useMemo } from 'react';
-import { Trans } from '@lingui/macro';
-import { useSelector } from 'react-redux';
-import type { RootState } from '../../../modules/rootReducer';
-import FarmCard from './FarmCard';
-import { mojo_to_dogechia } from '../../../util/dogechia';
-import useCurrencyCode from '../../../hooks/useCurrencyCode';
+const dogechia = require("../../util/dogechia");
 
-export default function FarmCardTotalChiaFarmed() {
-  const currencyCode = useCurrencyCode();
+describe("dogechia", () => {
+  it("converts number mojo to dogechia", () => {
+    const result = dogechia.mojo_to_dogechia(1000000);
 
-  const loading = useSelector(
-    (state: RootState) => !state.wallet_state.farmed_amount,
-  );
+    expect(result).toBe(0.000001);
+  });
+  it("converts string mojo to dogechia", () => {
+    const result = dogechia.mojo_to_dogechia("1000000");
 
-  const farmedAmount = useSelector(
-    (state: RootState) => state.wallet_state.farmed_amount?.farmed_amount,
-  );
+    expect(result).toBe(0.000001);
+  });
+  it("converts number mojo to dogechia string", () => {
+    const result = dogechia.mojo_to_dogechia_string(1000000);
 
-  const totalDogeChiaFarmed = useMemo(() => {
-    if (farmedAmount !== undefined) {
-      const val = BigInt(farmedAmount.toString());
-      return mojo_to_dogechia(val);
-    }
-  }, [farmedAmount]);
+    expect(result).toBe("0.000001");
+  });
+  it("converts string mojo to dogechia string", () => {
+    const result = dogechia.mojo_to_dogechia_string("1000000");
 
-  return (
-    <FarmCard
-      title={<Trans>{currencyCode} Total DogeChia Farmed</Trans>}
-      value={totalDogeChiaFarmed}
-      loading={loading}
-    />
-  );
-}
+    expect(result).toBe("0.000001");
+  });
+  it("converts number dogechia to mojo", () => {
+    const result = dogechia.dogechia_to_mojo(0.000001);
+
+    expect(result).toBe(1000000);
+  });
+  it("converts string dogechia to mojo", () => {
+    const result = dogechia.dogechia_to_mojo("0.000001");
+
+    expect(result).toBe(1000000);
+  });
+  it("converts number mojo to colouredcoin", () => {
+    const result = dogechia.mojo_to_colouredcoin(1000000);
+
+    expect(result).toBe(1000);
+  });
+  it("converts string mojo to colouredcoin", () => {
+    const result = dogechia.mojo_to_colouredcoin("1000000");
+
+    expect(result).toBe(1000);
+  });
+  it("converts number mojo to colouredcoin string", () => {
+    const result = dogechia.mojo_to_colouredcoin_string(1000000);
+
+    expect(result).toBe("1,000");
+  });
+  it("converts string mojo to colouredcoin string", () => {
+    const result = dogechia.mojo_to_colouredcoin_string("1000000");
+
+    expect(result).toBe("1,000");
+  });
+  it("converts number colouredcoin to mojo", () => {
+    const result = dogechia.colouredcoin_to_mojo(1000);
+
+    expect(result).toBe(1000000);
+  });
+  it("converts string colouredcoin to mojo", () => {
+    const result = dogechia.colouredcoin_to_mojo("1000");
+
+    expect(result).toBe(1000000);
+  });
+});
