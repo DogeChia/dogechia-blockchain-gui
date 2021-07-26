@@ -1,1 +1,4 @@
-export { default, Props as ButtonProps } from './Button';
+import type { ButtonProps } from './Button';
+
+export { default } from './Button';
+export type { ButtonProps };

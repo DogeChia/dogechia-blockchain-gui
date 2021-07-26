@@ -19,8 +19,8 @@ msgstr ""
 "X-Crowdin-File-ID: 72\n"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:39
-msgid "*Want to explore DogeChia’s blocks further? Check out <0>Chia Explorer</0> built by an open source developer."
-msgstr "*Wil jy dalk die DogeChia blokke verder wil ondersoek? Gaan kyk na <0>Chia Explorer<0>, gebou deur a 'n open source programmeerder."
+msgid "*Want to explore DogeChia’s blocks further? Check out <0>DogeChia Explorer</0> built by an open source developer."
+msgstr "*Wil jy dalk die DogeChia blokke verder wil ondersoek? Gaan kyk na <0>DogeChia Explorer<0>, gebou deur a 'n open source programmeerder."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:94
 #~ msgid "0 automatically chooses bucket count"
@@ -268,15 +268,15 @@ msgid "Chat on KeyBase"
 msgstr ""
 
 #: src/electron/main.tsx:362
-msgid"DogeChia"
-msgstr"DogeChia"
+msgid "DogeChia"
+msgstr "DogeChia"
 
 #: src/electron/main.tsx:312
-msgid"DogeChia Blockchain Wiki"
-msgstr"DogeChia Blockchain Wiki"
+msgid "DogeChia Blockchain Wiki"
+msgstr "DogeChia Blockchain Wiki"
 
 #: src/components/wallet/Wallets.tsx:32
-msgid"DogeChia Wallet"
+msgid "DogeChia Wallet"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:13

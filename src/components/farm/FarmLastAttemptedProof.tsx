@@ -44,17 +44,19 @@ export default function FarmLastAttemptedProof() {
 
   return (
     <Card
-      title={(
+      title={<Trans>Last Attempted Proof</Trans>}
+      tooltip={
         <Trans>
-          Last Attempted Proof
+          This table shows you the last time your farm attempted to win a block
+          challenge.{' '}
+          <Link
+            target="_blank"
+            href="https://github.com/DogeChia/dogechia-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it"
+          >
+            Learn more
+          </Link>
         </Trans>
-      )}
-      tooltip={(
-        <Trans>
-          This table shows you the last time your farm attempted to win a block challenge.{' '}
-          <Link target="_blank" href="https://github.com/DogeChia/dogechia-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it">Learn more</Link>
-        </Trans>
-      )}
+      }
       interactive
     >
       <Table

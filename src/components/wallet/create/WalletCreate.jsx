@@ -16,7 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   ArrowBackIos as ArrowBackIosIcon,
-  InvertColors as InvertColorsIcon,
+  InvertColors as InvertColorsIcon
 } from '@material-ui/icons';
 import SpeedIcon from '@material-ui/icons/Speed';
 import PersonIcon from '@material-ui/icons/Person';
@@ -124,11 +124,7 @@ export const MainWalletList = () => {
             <ListItemIcon>
               <InvertColorsIcon />
             </ListItemIcon>
-            <ListItemText
-              primary={
-                <Trans>Coloured Coin</Trans>
-              }
-            />
+            <ListItemText primary={<Trans>Coloured Coin</Trans>} />
           </ListItem>
           <ListItem button onClick={select_option_rl}>
             <ListItemIcon>
@@ -186,24 +182,14 @@ export const CCListItems = () => {
             <ListItemIcon>
               <InvertColorsIcon />
             </ListItemIcon>
-            <ListItemText
-              primary={
-                <Trans>
-                  Create new coloured coin
-                </Trans>
-              }
-            />
+            <ListItemText primary={<Trans>Create new coloured coin</Trans>} />
           </ListItem>
           <ListItem button onClick={select_option_existing}>
             <ListItemIcon>
               <InvertColorsIcon />
             </ListItemIcon>
             <ListItemText
-              primary={
-                <Trans>
-                  Create wallet for existing colour
-                </Trans>
-              }
+              primary={<Trans>Create wallet for existing colour</Trans>}
             />
           </ListItem>
         </List>
@@ -250,25 +236,13 @@ export const RLListItems = () => {
             <ListItemIcon>
               <SupervisorAccountIcon />
             </ListItemIcon>
-            <ListItemText
-              primary={
-                <Trans>
-                  Create admin wallet
-                </Trans>
-              }
-            />
+            <ListItemText primary={<Trans>Create admin wallet</Trans>} />
           </ListItem>
           <ListItem button onClick={select_option_user}>
             <ListItemIcon>
               <PersonIcon />
             </ListItemIcon>
-            <ListItemText
-              primary={
-                <Trans>
-                  Create user wallet
-                </Trans>
-              }
-            />
+            <ListItemText primary={<Trans>Create user wallet</Trans>} />
           </ListItem>
         </List>
       </Grid>
@@ -314,25 +288,13 @@ export const DIDListItems = () => {
             <ListItemIcon>
               <PersonIcon />
             </ListItemIcon>
-            <ListItemText
-              primary={
-                <Trans>
-                  Create DID wallet
-                </Trans>
-              }
-            />
+            <ListItemText primary={<Trans>Create wallet</Trans>} />
           </ListItem>
           <ListItem button onClick={select_option_recover}>
             <ListItemIcon>
               <BackupIcon />
             </ListItemIcon>
-            <ListItemText
-              primary={
-                <Trans>
-                  Recover DID wallet
-                </Trans>
-              }
-            />
+            <ListItemText primary={<Trans>Recover wallet</Trans>} />
           </ListItem>
         </List>
       </Grid>

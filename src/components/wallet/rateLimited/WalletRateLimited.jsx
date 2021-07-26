@@ -228,7 +228,7 @@ const IncompleteCard = (props) => {
   const id = props.wallet_id;
 
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.wallet_state.wallets[id - 1].data);
+  const data = useSelector((state) => state.wallet_state.wallets.find(i => i.id === id).data);
   const data_parsed = JSON.parse(data);
   const pubkey = data_parsed.user_pubkey;
 
@@ -270,13 +270,7 @@ const IncompleteCard = (props) => {
 
   const classes = useStyles();
   return (
-    <Card
-      title={(
-        <Trans>
-          Rate Limited User Wallet Setup
-        </Trans>
-      )}
-    >
+    <Card title={<Trans>Rate Limited User Wallet Setup</Trans>}>
       <Grid item xs={12}>
         <div className={classes.setupSection}>
           <Box display="flex">
@@ -296,11 +290,9 @@ const IncompleteCard = (props) => {
             <TextField
               disabled
               fullWidth
-              label={
-                <Trans>User Pubkey</Trans>
-              }
+              label={<Trans>User Pubkey</Trans>}
               value={pubkey}
-              variant="outlined"
+              variant="filled"
             />
           </Box>
           <Box>
@@ -322,8 +314,8 @@ const IncompleteCard = (props) => {
             <Box flexGrow={1} style={{ marginTop: 10, marginBottom: 0 }}>
               <Typography variant="subtitle1">
                 <Trans>
-                  When you receive the setup info packet from your admin,
-                  enter it below to complete your Rate Limited Wallet setup:
+                  When you receive the setup info packet from your admin, enter
+                  it below to complete your Rate Limited Wallet setup:
                 </Trans>
               </Typography>
             </Box>
@@ -338,9 +330,7 @@ const IncompleteCard = (props) => {
                   ip_input = input;
                 }}
                 margin="normal"
-                label={
-                  <Trans>Info Packet</Trans>
-                }
+                label={<Trans>Info Packet</Trans>}
               />
             </Box>
           </Box>
@@ -367,7 +357,7 @@ const IncompleteCard = (props) => {
 const RLDetailsCard = (props) => {
   const id = props.wallet_id;
 
-  const data = useSelector((state) => state.wallet_state.wallets[id - 1].data);
+  const data = useSelector((state) => state.wallet_state.wallets.find(i => i.id === id).data);
   const data_parsed = JSON.parse(data);
   const { type } = data_parsed;
   const { user_pubkey } = data_parsed;
@@ -398,16 +388,12 @@ const RLDetailsCard = (props) => {
   const classes = useStyles();
   if (type === 'user') {
     return (
-      <Card
-        title={<Trans>Rate Limited Info</Trans>}
-      >
+      <Card title={<Trans>Rate Limited Info</Trans>}>
         <Grid item xs={12}>
           <Box display="flex">
             <Box flexGrow={1}>
               <Typography variant="subtitle1">
-                <Trans>
-                  Spending Interval (number of blocks): {interval}
-                </Trans>
+                <Trans>Spending Interval (number of blocks): {interval}</Trans>
               </Typography>
             </Box>
             <Box flexGrow={1}>
@@ -428,7 +414,7 @@ const RLDetailsCard = (props) => {
                 fullWidth
                 label={<Trans>My Pubkey</Trans>}
                 value={user_pubkey}
-                variant="outlined"
+                variant="filled"
               />
             </Box>
             <Box>
@@ -449,16 +435,12 @@ const RLDetailsCard = (props) => {
   }
   if (type === 'admin') {
     return (
-      <Card
-        title={<Trans>Rate Limited Info</Trans>}
-      >
+      <Card title={<Trans>Rate Limited Info</Trans>}>
         <Grid item xs={12}>
           <Box display="flex" style={{ marginBottom: 20, marginTop: 20 }}>
             <Box flexGrow={1}>
               <Typography variant="subtitle1">
-                <Trans>
-                  Spending Interval (number of blocks): {interval}
-                </Trans>
+                <Trans>Spending Interval (number of blocks): {interval}</Trans>
               </Typography>
             </Box>
             <Box flexGrow={1}>
@@ -487,11 +469,9 @@ const RLDetailsCard = (props) => {
               <TextField
                 disabled
                 fullWidth
-                label={
-                  <Trans>Info Packet</Trans>
-                }
+                label={<Trans>Info Packet</Trans>}
                 value={ip_hex}
-                variant="outlined"
+                variant="filled"
               />
             </Box>
             <Box>
@@ -543,33 +523,27 @@ const BalanceCardSubSection = (props) => {
 const BalanceCard = (props) => {
   const id = props.wallet_id;
   const balance = useSelector(
-    (state) => state.wallet_state.wallets[id - 1].balance_total,
+    (state) => state.wallet_state.wallets.find(i => i.id === id).wallet_balance.confirmed_wallet_balance,
   );
   const balance_spendable = useSelector(
-    (state) => state.wallet_state.wallets[id - 1].balance_spendable,
+    (state) => state.wallet_state.wallets.find(i => i.id === id).wallet_balance.spendable_balance,
   );
   const balance_pending = useSelector(
-    (state) => state.wallet_state.wallets[id - 1].balance_pending,
+    (state) => state.wallet_state.wallets.find(i => i.id === id).wallet_balance.pending_balance,
   );
-  const balance_change = useSelector(
-    (state) => state.wallet_state.wallets[id - 1].balance_change,
-  );
+
   const balance_ptotal = balance + balance_pending;
   const classes = useStyles();
 
   return (
-    <Card
-      title={<Trans>Balance</Trans>}
-    >
+    <Card title={<Trans>Balance</Trans>}>
       <BalanceCardSubSection
         title={<Trans>Total Balance</Trans>}
         balance={balance}
         tooltip=""
       />
       <BalanceCardSubSection
-        title={
-          <Trans>Spendable Balance</Trans>
-        }
+        title={<Trans>Spendable Balance</Trans>}
         balance={balance_spendable}
         tooltip=""
       />
@@ -583,38 +557,19 @@ const BalanceCard = (props) => {
                 id="panel1a-header"
               >
                 <Typography className={classes.heading}>
-                  <Trans>
-                    View pending balances
-                  </Trans>
+                  <Trans>View pending balances</Trans>
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Grid container spacing={0}>
                   <BalanceCardSubSection
-                    title={
-                      <Trans>
-                        Pending Total Balance
-                      </Trans>
-                    }
+                    title={<Trans>Pending Total Balance</Trans>}
                     balance={balance_ptotal}
                     tooltip=""
                   />
                   <BalanceCardSubSection
-                    title={
-                      <Trans>
-                        Pending Balance
-                      </Trans>
-                    }
+                    title={<Trans>Pending Balance</Trans>}
                     balance={balance_pending}
-                    tooltip=""
-                  />
-                  <BalanceCardSubSection
-                    title={
-                      <Trans>
-                        Pending Change
-                      </Trans>
-                    }
-                    balance={balance_change}
                     tooltip=""
                   />
                 </Grid>
@@ -636,12 +591,12 @@ const SendCard = (props) => {
   const dispatch = useDispatch();
 
   const sending_transaction = useSelector(
-    (state) => state.wallet_state.wallets[id - 1].sending_transaction,
+    (state) => state.wallet_state.wallets.find(i => i.id === id).sending_transaction,
   );
   const syncing = useSelector((state) => state.wallet_state.status.syncing);
 
   const send_transaction_result = useSelector(
-    (state) => state.wallet_state.wallets[id - 1].send_transaction_result,
+    (state) => state.wallet_state.wallets.find(i => i.id === id).send_transaction_result,
   );
 
   const result = get_transaction_result(send_transaction_result);
@@ -658,10 +613,8 @@ const SendCard = (props) => {
       dispatch(
         openDialog(
           <AlertDialog>
-            <Trans>
-              Please finish syncing before making a transaction
-            </Trans>
-          </AlertDialog>
+            <Trans>Please finish syncing before making a transaction</Trans>
+          </AlertDialog>,
         ),
       );
       return;
@@ -676,10 +629,8 @@ const SendCard = (props) => {
       dispatch(
         openDialog(
           <AlertDialog>
-            <Trans>
-              Please enter a valid numeric amount
-            </Trans>
-          </AlertDialog>
+            <Trans>Please enter a valid numeric amount</Trans>
+          </AlertDialog>,
         ),
       );
       return;
@@ -688,10 +639,8 @@ const SendCard = (props) => {
       dispatch(
         openDialog(
           <AlertDialog>
-            <Trans>
-              Please enter a valid numeric fee
-            </Trans>
-          </AlertDialog>
+            <Trans>Please enter a valid numeric fee</Trans>
+          </AlertDialog>,
         ),
       );
       return;
@@ -712,7 +661,7 @@ const SendCard = (props) => {
             <Trans>
               Please enter 0 fee. Positive fees not supported yet for RL.
             </Trans>
-          </AlertDialog>
+          </AlertDialog>,
         ),
       );
       return;
@@ -725,9 +674,7 @@ const SendCard = (props) => {
   }
 
   return (
-    <Card
-      title={<Trans>Create Transaction</Trans>}
-    >
+    <Card title={<Trans>Create Transaction</Trans>}>
       {result_message && (
         <Grid item xs={12}>
           <p className={result_class}>{result_message}</p>
@@ -744,11 +691,7 @@ const SendCard = (props) => {
               inputRef={(input) => {
                 address_input = input;
               }}
-              label={
-                <Trans>
-                  Address / Puzzle hash
-                </Trans>
-              }
+              label={<Trans>Address / Puzzle hash</Trans>}
             />
           </Box>
           <Box />
@@ -807,12 +750,12 @@ const SendCard = (props) => {
 export default function RateLimitedWallet(props) {
   const id = useSelector((state) => state.wallet_menu.id);
   const wallets = useSelector((state) => state.wallet_state.wallets ?? []);
-  const data = useSelector((state) => state.wallet_state.wallets[id - 1].data);
+  const data = useSelector((state) => state.wallet_state.wallets.find(i => i.id === id).data);
   const data_parsed = JSON.parse(data);
   const { type } = data_parsed;
   const initStatus = data_parsed.initialized;
 
-  if (wallets.length >= props.wallet_id) {
+  if (wallets.length > props.wallet_id) {
     if (type === 'user') {
       if (initStatus) {
         return (

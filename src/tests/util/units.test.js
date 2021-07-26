@@ -18,14 +18,10 @@ describe('units', () => {
       expect(result).toBe(1e-9);
     });
     it('supports uppercase characters', () => {
-      const result = units.getUnit('CHIA');
-    it('supports uppercase characters', () => {
       const result = units.getUnit('DOGECHIA');
 
       expect(result).toBe(1);
     });
-    it('gets unit of dogechia using alias', () => {
-      const result = units.getUnit('ch');
     it('gets unit of chia using alias', () => {
       const result = units.getUnit('dg');
 

@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
 import styled from 'styled-components';
+
 import {
   Box,
   Divider,
@@ -13,7 +14,9 @@ import {
 import { Route, Switch, useRouteMatch, useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { Flex, FormatLargeNumber } from '@dogechia/core';
+
 import StandardWallet from './standard/WalletStandard';
+
 import {
   changeWalletMenu,
   standardWallet,
@@ -21,6 +24,7 @@ import {
   RLWallet,
   DIDWallet,
 } from '../../modules/walletMenu';
+
 import { CreateWalletView } from './create/WalletCreate';
 import ColouredWallet from './coloured/WalletColoured';
 import RateLimitedWallet from './rateLimited/WalletRateLimited';
@@ -28,9 +32,6 @@ import DistributedWallet from './did/DIDWallet';
 import type { RootState } from '../../modules/rootReducer';
 import WalletType from '../../constants/WalletType';
 import LayoutSidebar from '../layout/LayoutSidebar';
-import config from '../../config/config';
-
-const localTest = config.local_test;
 
 const StyledList = styled(List)`
   width: 100%;
@@ -39,51 +40,40 @@ const StyledList = styled(List)`
 const WalletItem = (props: any) => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const id = props.wallet_id;
+  const { wallet_id } = props;
 
-  const wallet = useSelector(
-    (state: RootState) => state.wallet_state.wallets[Number(id)],
+  const wallet = useSelector((state: RootState) =>
+    state.wallet_state.wallets?.find((item) => item.id === wallet_id),
   );
-  let name = useSelector(
-    (state: RootState) => state.wallet_state.wallets[Number(id)].name,
-  );
-  if (!name) {
-    name = '';
+
+  if (!wallet) {
+    return null;
   }
 
+  let { name = '' } = wallet;
+  const { id, type } = wallet;
+
   let mainLabel = <></>;
-  if (wallet.type === WalletType.STANDARD_WALLET) {
+  if (type === WalletType.STANDARD_WALLET) {
     mainLabel = <Trans>DogeChia Wallet</Trans>;
     name = 'DogeChia';
-  } else if (wallet.type === WalletType.COLOURED_COIN) {
+  } else if (type === WalletType.COLOURED_COIN) {
     mainLabel = <Trans>CC Wallet</Trans>;
-    if (name.length > 18) {
-      name = name.slice(0, 18);
-      name = name.concat('...');
-    }
-  } else if (wallet.type === WalletType.RATE_LIMITED) {
+  } else if (type === WalletType.RATE_LIMITED) {
     mainLabel = <Trans>RL Wallet</Trans>;
-    if (name.length > 18) {
-      name = name.slice(0, 18);
-      name = name.concat('...');
-    }
-  } else if (wallet.type === WalletType.DISTRIBUTED_ID) {
+  } else if (type === WalletType.DISTRIBUTED_ID) {
     mainLabel = <Trans>DID Wallet</Trans>;
-    if (name.length > 18) {
-      name = name.slice(0, 18);
-      name = name.concat('...');
-    }
   }
 
   function presentWallet() {
-    if (wallet.type === WalletType.STANDARD_WALLET) {
-      dispatch(changeWalletMenu(standardWallet, wallet.id));
-    } else if (wallet.type === WalletType.COLOURED_COIN) {
-      dispatch(changeWalletMenu(CCWallet, wallet.id));
-    } else if (wallet.type === WalletType.RATE_LIMITED) {
-      dispatch(changeWalletMenu(RLWallet, wallet.id));
-    } else if (wallet.type === WalletType.DISTRIBUTED_ID) {
-      dispatch(changeWalletMenu(DIDWallet, wallet.id));
+    if (type === WalletType.STANDARD_WALLET) {
+      dispatch(changeWalletMenu(standardWallet, id));
+    } else if (type === WalletType.COLOURED_COIN) {
+      dispatch(changeWalletMenu(CCWallet, id));
+    } else if (type === WalletType.RATE_LIMITED) {
+      dispatch(changeWalletMenu(RLWallet, id));
+    } else if (type === WalletType.DISTRIBUTED_ID) {
+      dispatch(changeWalletMenu(DIDWallet, id));
     }
 
     history.push('/dashboard/wallets');
