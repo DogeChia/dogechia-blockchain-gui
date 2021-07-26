@@ -770,7 +770,7 @@ const CreateAttest = (props) => {
     }
     let address = puzhash_input.value.trim();
     if (address.substring(0, 16) === 'dogechia_addr://') {
-      address = address.substring(12);
+      address = address.substring(16);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
       address = address.substring(2);

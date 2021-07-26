@@ -323,8 +323,8 @@ function SendCard(props: SendCardProps) {
       return;
     }
 
-    if (address.slice(0, 12) === 'chia_addr://') {
-      address = address.slice(12);
+    if (address.slice(0, 16) === 'dogechia_addr://') {
+      address = address.slice(16);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
       address = address.slice(2);
