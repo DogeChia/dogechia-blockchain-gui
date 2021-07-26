@@ -67,10 +67,8 @@ export const CreateExistingCCWallet = () => {
       dispatch(
         openDialog(
           <AlertDialog>
-            <Trans>
-              Please enter a valid numeric fee
-            </Trans>
-          </AlertDialog>
+            <Trans>Please enter a valid numeric fee</Trans>
+          </AlertDialog>,
         ),
       );
       return;

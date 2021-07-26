@@ -8,12 +8,10 @@ import useOpenExternal from '../../../../hooks/useOpenExternal';
 
 type Props = {
   defaultLocale: string;
-  locales: [
-    {
-      locale: string;
-      label: string;
-    },
-  ];
+  locales: [{
+    locale: string;
+    label: string;
+  }];
 };
 
 export default function LocaleToggle(props: Props) {
@@ -42,9 +40,7 @@ export default function LocaleToggle(props: Props) {
   function handleHelpTranslate() {
     handleClose();
 
-    openExternal(
-      'https://github.com/DogeChia-Network/dogechia-blockchain-gui/tree/main/src/locales/README.md',
-    );
+    openExternal('https://github.com/DogeChia/dogechia-blockchain-gui/tree/main/src/locales/README.md');
   }
 
   const localeData = useMemo(

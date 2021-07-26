@@ -15,7 +15,7 @@ msgstr ""
 "X-Crowdin-Project: dogechia-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: cs\n"
-"X-Crowdin-File: /[DogeChia-Network.dogechia-blockchain-gui] main/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[DogeChia.dogechia-blockchain-gui] main/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 118\n"
 
 #: src/components/plot/add/PlotAddNFT.tsx:62
@@ -23,8 +23,8 @@ msgid "(Optional)"
 msgstr "(Volitelné)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:64
-msgid "*Want to explore DogeChia’s blocks further? Check out <0>Chia Explorer</0> built by an open source developer."
-msgstr "*Chcete se o DogeChia blocích dozvědět více? Podívej se na <0>Chia Explorer</0> vytvořený open source vývojářem."
+msgid "*Want to explore DogeChia’s blocks further? Check out <0>DogeChia Explorer</0> built by an open source developer."
+msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:123
 msgid "+ Add New Plot NFT"
@@ -42,10 +42,10 @@ msgstr "Doporučuje se 128"
 msgid "A harvester is a service running on a machine where plot(s) are actually stored. A farmer and harvester talk to a full node to see the state of the chain. View your network of connected harvesters below Learn more"
 msgstr "Tzv. harvester (sklízeč) je služba provozovaná na počítači, kde jsou uložená i samotná pole. Tzv. farmer (farmář) spolu s harvesterem komunikují s uzlem za účelem získání stavu blockchainu. Seznam připojených harvesterů vidíte níže"
 
-#: src/electron/main.tsx:422
-#: src/electron/main.tsx:509
+#: src/electron/main.tsx:423
+#: src/electron/main.tsx:510
 msgid "About DogeChia Blockchain"
-msgstr "O DogeChia Blockchainu"
+msgstr ""
 
 #: src/components/trading/ViewOffer.jsx:74
 msgid "Accept"
@@ -80,9 +80,9 @@ msgstr "Přidat složku pole"
 msgid "Add Plot to Queue"
 msgstr "Přidat pole do fronty"
 
-#: src/components/wallet/Wallets.tsx:88
-#~ msgid "Add Wallet"
-#~ msgstr "Add Wallet"
+#: src/components/wallet/Wallets.tsx:100
+msgid "Add Wallet"
+msgstr "Add Wallet"
 
 #: src/components/farm/overview/FarmOverviewHero.tsx:46
 #: src/components/plot/PlotHeader.tsx:63
@@ -111,12 +111,12 @@ msgstr "Přidat {currencyCode} z Faucetu"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:561
 #: src/components/wallet/coloured/WalletColoured.tsx:657
-#: src/components/wallet/standard/WalletStandard.tsx:596
+#: src/components/wallet/standard/WalletStandard.tsx:456
 msgid "Address"
 msgstr "Adresa"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:701
-#: src/components/wallet/standard/WalletStandard.tsx:503
+#: src/components/wallet/standard/WalletStandard.tsx:363
 msgid "Address / Puzzle hash"
 msgstr "Adresa / Hash šifry"
 
@@ -126,7 +126,7 @@ msgstr "Adresa / Hash šifry"
 #: src/components/wallet/WalletHistory.tsx:62
 #: src/components/wallet/create/createNewColouredCoin.jsx:119
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:720
-#: src/components/wallet/standard/WalletStandard.tsx:513
+#: src/components/wallet/standard/WalletStandard.tsx:373
 msgid "Amount"
 msgstr "Částka"
 
@@ -144,7 +144,7 @@ msgid "Are you sure you want to delete the plot? The plot cannot be recovered."
 msgstr "Jste si jisti, že chcete pole odstranit? Pole nelze obnovit."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:122
-#: src/components/wallet/standard/WalletStandard.tsx:632
+#: src/components/wallet/standard/WalletStandard.tsx:492
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Opravdu chcete odstranit nepotvrzenou transakci?"
 
@@ -183,7 +183,7 @@ msgstr "Záložní soubor se používá k obnovení chytrých peněženek."
 msgid "Balance"
 msgstr "Zůstatek"
 
-#: src/components/block/Block.jsx:301
+#: src/components/block/Block.jsx:290
 msgid "Base Farmer Reward Amount"
 msgstr "Výše základu odměny farmáře"
 
@@ -200,34 +200,34 @@ msgstr "Odhad za posledních 24 hodin"
 #~ msgid "Best estimate over last 5 hours"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:129
-#: src/components/block/Block.jsx:153
-#: src/components/block/Block.jsx:157
-#: src/components/block/Block.jsx:316
+#: src/components/block/Block.jsx:112
+#: src/components/block/Block.jsx:146
+#: src/components/block/Block.jsx:151
+#: src/components/block/Block.jsx:306
 msgid "Block"
 msgstr "Blok"
 
-#: src/components/block/Block.jsx:137
+#: src/components/block/Block.jsx:124
 msgid "Block Test"
 msgstr "Test bloku"
 
-#: src/components/block/Block.jsx:235
+#: src/components/block/Block.jsx:230
 msgid "Block VDF Iterations"
 msgstr "VDF iterace bloku"
 
-#: src/components/block/Block.jsx:320
+#: src/components/block/Block.jsx:311
 msgid "Block at height {0} in the DogeChia blockchain"
-msgstr "Blok v DogeChia blockchainu ve výšce {0}"
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:141
+#: src/components/block/Block.jsx:129
 msgid "Block with hash {headerHash}"
 msgstr "Blok s hashem {headerHash}"
 
-#: src/components/block/Block.jsx:162
+#: src/components/block/Block.jsx:158
 msgid "Block with hash {headerHash} does not exist."
 msgstr "Blok s hashem {headerHash} neexistuje."
 
@@ -255,9 +255,9 @@ msgstr "V současné době farmaříte <0/>"
 msgid "Buy"
 msgstr "Koupit"
 
-#: src/components/wallet/Wallets.tsx:49
-#~ msgid "CC Wallet"
-#~ msgstr "CC Wallet"
+#: src/components/wallet/Wallets.tsx:61
+msgid "CC Wallet"
+msgstr "CC Wallet"
 
 #: src/components/wallet/create/WalletCreate.jsx:182
 #~ msgid "CCListItems.title"
@@ -304,17 +304,13 @@ msgstr "Změnit"
 msgid "Change Pool"
 msgstr "Změnit sdružení"
 
-#: src/electron/main.tsx:401
+#: src/electron/main.tsx:402
 msgid "Chat on Discord"
 msgstr ""
 
 #: src/electron/main.tsx:401
 #~ msgid "Chat on KeyBase"
 #~ msgstr "Chat na KeyBase"
-
-#: src/components/wallet/standard/WalletStandard.tsx:647
-msgid "Chia Wallet"
-msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:36
 msgid "Choose Number of Plots"
@@ -351,7 +347,7 @@ msgstr "Barva"
 msgid "Colour Info"
 msgstr "Informace o Barvě"
 
-#: src/components/wallet/create/createExistingColouredCoin.jsx:112
+#: src/components/wallet/create/createExistingColouredCoin.jsx:110
 msgid "Colour String"
 msgstr "Řetězec Barvy"
 
@@ -378,7 +374,7 @@ msgid "Confirm Disconnect"
 msgstr "Potvrdit odpojení"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:118
-#: src/components/wallet/standard/WalletStandard.tsx:628
+#: src/components/wallet/standard/WalletStandard.tsx:488
 msgid "Confirmation"
 msgstr "Potvrzení"
 
@@ -416,7 +412,7 @@ msgstr "Připojuje se peněženka"
 msgid "Connection Status"
 msgstr "Stav připojení"
 
-#: src/components/farm/FarmFullNodeConnections.tsx:111
+#: src/components/farm/FarmFullNodeConnections.tsx:112
 #: src/components/farm/FarmYourHarvesterNetwork.tsx:109
 msgid "Connection Status:"
 msgstr "Stav připojení:"
@@ -429,7 +425,7 @@ msgstr "Typ připojení"
 msgid "Connections"
 msgstr "Připojení"
 
-#: src/electron/main.tsx:382
+#: src/electron/main.tsx:383
 msgid "Contribute on GitHub"
 msgstr "Pomoci s vývojem na GitHubu"
 
@@ -451,7 +447,7 @@ msgstr "Zkopírovat do schránky"
 #: src/components/backup/BackupCreate.tsx:78
 #: src/components/plot/add/PlotAdd.tsx:177
 #: src/components/plotNFT/select/PlotNFTSelectPool.tsx:175
-#: src/components/wallet/create/createExistingColouredCoin.jsx:135
+#: src/components/wallet/create/createExistingColouredCoin.jsx:133
 #: src/components/wallet/create/createNewColouredCoin.jsx:142
 #: src/components/wallet/create/createRLAdmin.jsx:307
 #: src/components/wallet/create/createRLUser.jsx:99
@@ -488,7 +484,7 @@ msgstr "Vytvořit obchodní nabídku"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:543
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:684
-#: src/components/wallet/standard/WalletStandard.tsx:483
+#: src/components/wallet/standard/WalletStandard.tsx:343
 msgid "Create Transaction"
 msgstr "Vytvořit transakci"
 
@@ -516,7 +512,7 @@ msgstr "Vytvořit novou barevnou minci"
 msgid "Create user wallet"
 msgstr "Vytvořit uživatelskou peněženku"
 
-#: src/components/wallet/create/createExistingColouredCoin.jsx:95
+#: src/components/wallet/create/createExistingColouredCoin.jsx:93
 msgid "Create wallet for colour"
 msgstr "Vytvořit peněženku na barvu"
 
@@ -566,9 +562,9 @@ msgstr "Současný stav obchodu"
 msgid "DANGER: permanently delete private key"
 msgstr "POZOR: trvale odstraní privátní klíč"
 
-#: src/components/wallet/Wallets.tsx:53
-#~ msgid "DID Wallet"
-#~ msgstr "DID Wallet"
+#: src/components/wallet/Wallets.tsx:65
+msgid "DID Wallet"
+msgstr "DID Wallet"
 
 #: src/components/wallet/create/WalletCreate.jsx:310
 #~ msgid "DIDListItems.title"
@@ -591,7 +587,7 @@ msgstr "Zpoždění"
 #: src/components/plotNFT/PlotNFTCard.tsx:119
 #: src/components/selectKey/SelectKey.tsx:59
 #: src/components/selectKey/SelectKey.tsx:80
-#: src/components/wallet/standard/WalletStandard.tsx:629
+#: src/components/wallet/standard/WalletStandard.tsx:489
 msgid "Delete"
 msgstr "Odstranit"
 
@@ -601,7 +597,7 @@ msgid "Delete Plot"
 msgstr "Smazat pole"
 
 #: src/components/plotNFT/PlotNFTCard.tsx:314
-#: src/components/wallet/standard/WalletStandard.tsx:663
+#: src/components/wallet/standard/WalletStandard.tsx:523
 msgid "Delete Unconfirmed Transactions"
 msgstr "Odstranit nepotvrzené transakce"
 
@@ -622,15 +618,15 @@ msgstr "Smazáním klíčů permanentně odeberete všechny klíče z počítač
 msgid "Deleting the key will permanently remove the key from your computer, make sure you have backups. Are you sure you want to continue?"
 msgstr "Smazáním klíče tento klíč nevratně odeberete z počítače. Ujistěte se, že máte zálohu. Jste si jisti, že chcete pokračovat?"
 
-#: src/electron/main.tsx:304
+#: src/electron/main.tsx:305
 msgid "Developer"
 msgstr "Vývojář"
 
-#: src/electron/main.tsx:307
+#: src/electron/main.tsx:308
 msgid "Developer Tools"
 msgstr "Vývojářské nástroje"
 
-#: src/components/block/Block.jsx:221
+#: src/components/block/Block.jsx:216
 #: src/components/fullNode/card/FullNodeCardDifficulty.tsx:20
 msgid "Difficulty"
 msgstr "Obtížnost"
@@ -668,28 +664,29 @@ msgstr "Máte již na tomto počítači existující pole? <0>Přidejte složku 
 msgid "Does your machine support parallel plotting?"
 msgstr "Zvládne vaše zařízení paralelní vytváření polí?"
 
-#: src/electron/main.tsx:419
+#: src/electron/main.tsx:420
 msgid "DogeChia"
-msgstr "DogeChia"
+msgstr ""
 
-#: src/electron/main.tsx:358
+#: src/electron/main.tsx:359
 msgid "DogeChia Blockchain Wiki"
-msgstr "DogeChia Blockchain Wiki"
+msgstr ""
 
-#: src/components/wallet/standard/WalletStandard.tsx:647
-#~ msgid "DogeChia Wallet"
-#~ msgstr "DogeChia peněženka"
+#: src/components/wallet/Wallets.tsx:58
+#: src/components/wallet/standard/WalletStandard.tsx:507
+msgid "DogeChia Wallet"
+msgstr ""
 
 #: src/components/trading/ViewOffer.jsx:39
 #: src/components/wallet/create/recoverDIDWallet.js:294
 msgid "Drag and drop offer file"
 msgstr "Přetáhněte soubor nabídky"
 
-#: src/components/backup/BackupRestore.tsx:173
+#: src/components/backup/BackupRestore.tsx:172
 msgid "Drag and drop your backup file"
 msgstr "Přetáhněte soubor zálohy"
 
-#: src/electron/main.tsx:263
+#: src/electron/main.tsx:264
 msgid "Edit"
 msgstr "Upravit"
 
@@ -707,7 +704,7 @@ msgstr "Zadejte 24 slov, které jste si poznamenali při zakládání vaší Dog
 msgid "Error"
 msgstr "Chyba"
 
-#: src/components/wallet/standard/WalletStandard.tsx:456
+#: src/components/wallet/standard/WalletStandard.tsx:317
 msgid "Error: Cannot send dogechia to coloured address. Please enter a dogechia address."
 msgstr "Chyba: DogeChia nelze odeslat na barevnou adresu. Zadejte prosím běžnou DogeChia adresu."
 
@@ -741,9 +738,9 @@ msgstr "Vynechat cílovou složku"
 msgid "Failed to open (invalid plots)"
 msgstr "Nepodařilo se otevřít (neplatná pole)"
 
-#: src/components/dashboard/DashboardSideBar.tsx:55
+#: src/components/dashboard/DashboardSideBar.tsx:56
 #: src/components/wallet/coloured/WalletColoured.tsx:610
-#: src/components/wallet/standard/WalletStandard.tsx:532
+#: src/components/wallet/standard/WalletStandard.tsx:392
 msgid "Farm"
 msgstr "Farma"
 
@@ -751,7 +748,7 @@ msgstr "Farma"
 msgid "Farmer Public Key"
 msgstr ""
 
-#: src/components/block/Block.jsx:267
+#: src/components/block/Block.jsx:252
 msgid "Farmer Puzzle Hash"
 msgstr "Hash hádanek pro farmáře"
 
@@ -809,12 +806,12 @@ msgstr "Stav"
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:147
 #: src/components/pool/PoolInfo.tsx:17
 #: src/components/wallet/WalletHistory.tsx:66
-#: src/components/wallet/create/createExistingColouredCoin.jsx:125
+#: src/components/wallet/create/createExistingColouredCoin.jsx:123
 #: src/components/wallet/create/createNewColouredCoin.jsx:132
 #: src/components/wallet/create/createRLAdmin.jsx:244
 #: src/components/wallet/create/createRLAdmin.jsx:272
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:733
-#: src/components/wallet/standard/WalletStandard.tsx:524
+#: src/components/wallet/standard/WalletStandard.tsx:384
 msgid "Fee"
 msgstr "Poplatek"
 
@@ -830,7 +827,7 @@ msgstr "Poplatek"
 msgid "Fee ({currencyCode})"
 msgstr "Poplatek ({currencyCode})"
 
-#: src/components/block/Block.jsx:305
+#: src/components/block/Block.jsx:294
 msgid "Fees Amount"
 msgstr "Výše poplatků"
 
@@ -838,8 +835,8 @@ msgstr "Výše poplatků"
 #~ msgid "Fees Puzzle Hash"
 #~ msgstr ""
 
-#: src/electron/main.tsx:255
-#: src/electron/main.tsx:456
+#: src/electron/main.tsx:256
+#: src/electron/main.tsx:457
 msgid "File"
 msgstr "Soubor"
 
@@ -858,15 +855,15 @@ msgstr "Umístění konečné složky"
 msgid "Finished"
 msgstr "Dokončeno"
 
-#: src/electron/main.tsx:407
+#: src/electron/main.tsx:408
 msgid "Follow on Twitter"
 msgstr "Sledovat na Twitteru"
 
-#: src/electron/main.tsx:366
+#: src/electron/main.tsx:367
 msgid "Frequently Asked Questions"
 msgstr "Často kladené otázky"
 
-#: src/components/dashboard/DashboardSideBar.tsx:39
+#: src/components/dashboard/DashboardSideBar.tsx:40
 #: src/components/fullNode/FullNode.jsx:323
 msgid "Full Node"
 msgstr "Uzel"
@@ -879,7 +876,7 @@ msgstr "Přehled uzlu"
 #~ msgid "Full Node Status"
 #~ msgstr "Full Node Status"
 
-#: src/electron/main.tsx:332
+#: src/electron/main.tsx:333
 msgid "Full Screen"
 msgstr "Celá obrazovka"
 
@@ -895,7 +892,7 @@ msgstr "Generovat novou barvu"
 msgid "Grid view"
 msgstr "Mřížkové zobrazení"
 
-#: src/components/wallet/standard/WalletStandard.tsx:583
+#: src/components/wallet/standard/WalletStandard.tsx:443
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefor wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
 msgstr "HD nebo Hierarchické Deterministické klíče jsou typy veřejného/soukromého klíče, kde jeden soukromý klíč může mít téměř nekonečný počet různých veřejných klíčů (a tedy i příchozích adres peněženky). Všechny adresy tedy končí v jedné a té samé peněžence."
 
@@ -911,17 +908,17 @@ msgstr ""
 msgid "Header Hash"
 msgstr "Hash hlavičky"
 
-#: src/components/block/Block.jsx:185
+#: src/components/block/Block.jsx:180
 msgid "Header hash"
 msgstr "Hash hlavičky"
 
-#: src/components/block/Block.jsx:201
+#: src/components/block/Block.jsx:194
 #: src/components/fullNode/FullNode.jsx:81
 #: src/components/fullNode/FullNodeConnections.tsx:79
 msgid "Height"
 msgstr "Výška"
 
-#: src/electron/main.tsx:354
+#: src/electron/main.tsx:355
 msgid "Help"
 msgstr "Nápověda"
 
@@ -1038,7 +1035,7 @@ msgstr ""
 msgid "K-Size"
 msgstr "K - velikost"
 
-#: src/components/dashboard/DashboardSideBar.tsx:66
+#: src/components/dashboard/DashboardSideBar.tsx:72
 msgid "Keys"
 msgstr "Klíče"
 
@@ -1082,8 +1079,8 @@ msgid "Loading Plot NFTs"
 msgstr "Načítání NFT polí"
 
 #: src/components/wallet/Wallets.tsx:172
-msgid "Loading list of wallets"
-msgstr "Načítání seznamu peněženek"
+#~ msgid "Loading list of wallets"
+#~ msgstr "Načítání seznamu peněženek"
 
 #: src/components/plot/queue/PlotQueueLogDialog.tsx:41
 msgid "Loading..."
@@ -1178,7 +1175,7 @@ msgstr "Název sítě"
 #~ msgstr "Network not launched yet, waiting for genesis challenge!"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:685
-#: src/components/wallet/standard/WalletStandard.tsx:579
+#: src/components/wallet/standard/WalletStandard.tsx:439
 msgid "New Address"
 msgstr "Nová adresa"
 
@@ -1186,7 +1183,7 @@ msgstr "Nová adresa"
 msgid "New Wallet"
 msgstr "Nová peněženka"
 
-#: src/components/block/Block.jsx:335
+#: src/components/block/Block.jsx:325
 #: src/components/wallet/WalletAdd.tsx:95
 #: src/components/wallet/WalletImport.tsx:163
 msgid "Next"
@@ -1265,7 +1262,7 @@ msgid "Not found Plots"
 msgstr "Pole nenalezena"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:184
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XDG reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
 msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:120
@@ -1295,7 +1292,7 @@ msgstr "Nabídka"
 msgid "Offers Created"
 msgstr "Vytvořené nabídky"
 
-#: src/components/wallet/standard/WalletStandard.tsx:485
+#: src/components/wallet/standard/WalletStandard.tsx:345
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "Mezi každým transakčním blokem je v průměru jedna minuta. Pokud nedojde ke zdržení z důvodu přetížení, zpracování vaší transakce proběhne zhruba do minuty."
 
@@ -1354,7 +1351,7 @@ msgstr "Prosím, zadejte platné množství"
 
 #: src/components/wallet/create/createNewColouredCoin.jsx:69
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:639
-#: src/components/wallet/standard/WalletStandard.tsx:432
+#: src/components/wallet/standard/WalletStandard.tsx:293
 msgid "Please enter a valid numeric amount"
 msgstr "Prosím, zadejte platné množství"
 
@@ -1362,7 +1359,7 @@ msgstr "Prosím, zadejte platné množství"
 #: src/components/wallet/create/createNewColouredCoin.jsx:79
 #: src/components/wallet/create/createRLAdmin.jsx:150
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:649
-#: src/components/wallet/standard/WalletStandard.tsx:444
+#: src/components/wallet/standard/WalletStandard.tsx:305
 msgid "Please enter a valid numeric fee"
 msgstr "Prosím, zadejte platnou číselnou hodnotu"
 
@@ -1379,7 +1376,7 @@ msgid "Please enter a valid pubkey"
 msgstr "Zadejte prosím platný pubkey"
 
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:623
-#: src/components/wallet/standard/WalletStandard.tsx:420
+#: src/components/wallet/standard/WalletStandard.tsx:281
 msgid "Please finish syncing before making a transaction"
 msgstr "Prosím dokončete synchronizaci před provedením transakce"
 
@@ -1426,7 +1423,7 @@ msgstr "Pole"
 msgid "Plot Count"
 msgstr "Počet polí"
 
-#: src/components/block/Block.jsx:283
+#: src/components/block/Block.jsx:268
 msgid "Plot Id"
 msgstr "ID pole"
 
@@ -1447,7 +1444,7 @@ msgstr "NFT pole s p2_singleton_puzzle_hash {plotNFTId} neexistuje"
 #~ msgid "Plot Name"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:259
+#: src/components/block/Block.jsx:244
 msgid "Plot Public Key"
 msgstr "Veřejný klíč pole"
 
@@ -1475,7 +1472,7 @@ msgstr "Pole je duplikát {0}"
 msgid "PlotNFT is transitioning to (target state). This can take a while. Please do not close the application until this is finalized."
 msgstr "NFT pole se mění na (cílový stav). Může to chvíli trvat. Prosím nezavírejte aplikaci, dokud nebude tato akce dokončena."
 
-#: src/components/dashboard/DashboardSideBar.tsx:50
+#: src/components/dashboard/DashboardSideBar.tsx:51
 msgid "Plots"
 msgstr "Pole"
 
@@ -1518,7 +1515,7 @@ msgstr "Body nalezené za posledních 24 hodin"
 msgid "Points Successful in Last 24 Hours"
 msgstr "Body úspěšné v posledních 24 hodinách"
 
-#: src/components/dashboard/DashboardSideBar.tsx:60
+#: src/components/dashboard/DashboardSideBar.tsx:66
 #: src/components/pool/Pool.tsx:25
 msgid "Pool"
 msgstr "Pool"
@@ -1540,12 +1537,12 @@ msgstr "Přihlašovací odkaz do poolu"
 msgid "Pool Payout Instructions"
 msgstr "Pokyny k výplatě z poolu"
 
-#: src/components/block/Block.jsx:263
+#: src/components/block/Block.jsx:248
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:222
 msgid "Pool Public Key"
 msgstr "Veřejný klíč poolu"
 
-#: src/components/block/Block.jsx:275
+#: src/components/block/Block.jsx:260
 msgid "Pool Puzzle Hash"
 msgstr "Hádankový klíč"
 
@@ -1565,7 +1562,7 @@ msgstr ""
 msgid "Pool Reward Address must not be empty."
 msgstr ""
 
-#: src/components/block/Block.jsx:297
+#: src/components/block/Block.jsx:286
 msgid "Pool Reward Amount"
 msgstr "Částka odměny sdružení"
 
@@ -1608,7 +1605,7 @@ msgstr "Připravuji NFT pole"
 msgid "Preparing standard wallet"
 msgstr ""
 
-#: src/components/block/Block.jsx:332
+#: src/components/block/Block.jsx:320
 msgid "Previous"
 msgstr "Předchozí"
 
@@ -1616,7 +1613,7 @@ msgstr "Předchozí"
 #~ msgid "Previous Block Hash"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:215
+#: src/components/block/Block.jsx:208
 msgid "Previous Header Hash"
 msgstr "Hash předchozího záhlaví"
 
@@ -1636,7 +1633,7 @@ msgstr "Soukromý klíč {0}"
 msgid "Private key:"
 msgstr "Soukromý klíč:"
 
-#: src/components/block/Block.jsx:251
+#: src/components/block/Block.jsx:240
 msgid "Proof of Space Size"
 msgstr "Velikost vloženého prostoru"
 
@@ -1676,9 +1673,9 @@ msgstr "Ve frontě"
 msgid "RAM max usage"
 msgstr "Maximální využití RAM"
 
-#: src/components/wallet/Wallets.tsx:51
-#~ msgid "RL Wallet"
-#~ msgstr "RL Wallet"
+#: src/components/wallet/Wallets.tsx:63
+msgid "RL Wallet"
+msgstr "RL Wallet"
 
 #: src/components/wallet/create/WalletCreate.jsx:246
 #~ msgid "RLListItems.title"
@@ -1702,7 +1699,7 @@ msgid "Rate Limited User Wallet Setup"
 msgstr "Nastavení uživatelské peněženky s omezenou rychlostí"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:650
-#: src/components/wallet/standard/WalletStandard.tsx:576
+#: src/components/wallet/standard/WalletStandard.tsx:436
 msgid "Receive Address"
 msgstr "Adresa příjemce"
 
@@ -1719,7 +1716,7 @@ msgstr "Obnovit Pole"
 msgid "Relative Lock Height"
 msgstr ""
 
-#: src/electron/main.tsx:374
+#: src/electron/main.tsx:375
 msgid "Release Notes"
 msgstr "Poznámky k vydání"
 
@@ -1731,7 +1728,7 @@ msgstr "Odebírání"
 msgid "Rename"
 msgstr "Přejmenovat"
 
-#: src/electron/main.tsx:393
+#: src/electron/main.tsx:394
 msgid "Report an Issue..."
 msgstr "Nahlásit chybu..."
 
@@ -1748,7 +1745,7 @@ msgstr "Obnovit data pro barevné mince a další Smart peněženky ze zálohy"
 #~ msgid "SB Height"
 #~ msgstr "SB Height"
 
-#: src/components/backup/BackupRestore.tsx:186
+#: src/components/backup/BackupRestore.tsx:187
 msgid "Safe To Skip"
 msgstr "Přeskočit"
 
@@ -1844,7 +1841,7 @@ msgstr "Prodat"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:620
 #: src/components/wallet/rateLimited/WalletRateLimited.jsx:748
-#: src/components/wallet/standard/WalletStandard.tsx:542
+#: src/components/wallet/standard/WalletStandard.tsx:402
 msgid "Send"
 msgstr "Odeslat"
 
@@ -1893,7 +1890,7 @@ msgstr ""
 msgid "Something went wrong"
 msgstr "Něco se pokazilo"
 
-#: src/electron/main.tsx:470
+#: src/electron/main.tsx:471
 msgid "Speech"
 msgstr "Řeč"
 
@@ -1938,7 +1935,7 @@ msgstr "Stav"
 #: src/components/trading/TradingOverview.jsx:128
 #: src/components/wallet/WalletHistory.tsx:55
 #: src/components/wallet/WalletStatusCard.tsx:22
-#: src/components/wallet/Wallets.tsx:118
+#: src/components/wallet/Wallets.tsx:125
 msgid "Status"
 msgstr "Stav"
 
@@ -2030,11 +2027,11 @@ msgstr ""
 msgid "Temporary folder location"
 msgstr "Umístění dočasné složky"
 
-#: src/components/app/AppTimeBomb.tsx:30
+#: src/components/app/AppTimeBomb.tsx:27
 msgid "The application will stop working at block height 193536."
 msgstr "Aplikace přestane pracovat při výšce bloku 193536."
 
-#: src/components/farm/FarmFullNodeConnections.tsx:97
+#: src/components/farm/FarmFullNodeConnections.tsx:101
 msgid "The full node that your farmer is connected to is below. <0>Learn more</0>"
 msgstr "Uzel ke kterému je váš farmer (farmář) připojen. <0>Zjistit více</0>"
 
@@ -2075,19 +2072,19 @@ msgstr "URL adresa poolu musí používat protokol https. {normalizedUrl}"
 msgid "The pool switching operation was cancelled, please try again by changing pool, or self pooling"
 msgstr ""
 
-#: src/components/block/Block.jsx:286
+#: src/components/block/Block.jsx:271
 msgid "The seed used to create the plot. This depends on the pool pk and plot pk."
 msgstr "Seed použitý k vytvoření pole. To závisí na pk poolu a pk pole."
 
-#: src/components/block/Block.jsx:228
+#: src/components/block/Block.jsx:223
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on the whole chain up to this sub block."
 msgstr "Celkový počet VDF (verifiable delay function) nebo tzv. proof of time opakování v celém blockchainu až po aktuální blok."
 
-#: src/components/block/Block.jsx:244
+#: src/components/block/Block.jsx:233
 msgid "The total number of VDF (verifiable delay function) or proof of time iterations on this block."
 msgstr "Celkový počet VDF (verifiable delay function) nebo tzv. proof of time opakování v celém blockchainu až po aktuální blok."
 
-#: src/components/block/Block.jsx:308
+#: src/components/block/Block.jsx:297
 msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Souhrnná výše transakčních poplatků v tomto bloku. Vyplaceno farmářům."
 
@@ -2115,12 +2112,8 @@ msgid "This feature is available only from the GUI."
 msgstr "Tato funkce je dostupná pouze v grafickém rozhraní."
 
 #: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr ""
-
-#: src/components/wallet/card/WalletCardSpendableBalance.tsx:26
-#~ msgid "This is the amount of DogeChia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and DogeChia that you have just spent but is not yet in the blockchain."
-#~ msgstr "DogeChia zůstatek využitelný pro transakce. Neobsahuje nezpracované odměny za farmaření, nezpracované příchozí transakce a ani převody, které ještě nebyly zaneseny do blockchainu."
+msgid "This is the amount of DogeChia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and DogeChia that you have just spent but is not yet in the blockchain."
+msgstr "DogeChia zůstatek využitelný pro transakce. Neobsahuje nezpracované odměny za farmaření, nezpracované příchozí transakce a ani převody, které ještě nebyly zaneseny do blockchainu."
 
 #: src/components/wallet/card/WalletCardPendingChange.tsx:26
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -2134,7 +2127,7 @@ msgstr "Souhrn příchozích a odchozích nezpracovaných změn (zatím nejsou o
 msgid "This is the time of the latest peak sub block."
 msgstr "Čas dosažní dosud nejvyššího bloku."
 
-#: src/components/block/Block.jsx:194
+#: src/components/block/Block.jsx:187
 msgid "This is the time the block was created by the farmer, which is before it is finalized with a proof of time"
 msgstr "Čas vytvoření bloku farmářem ještě před jeho dokončením důkazem času (proof of time)"
 
@@ -2184,9 +2177,9 @@ msgstr "Tento obchod byl vytvořen v této době"
 msgid "This trade was included on blockchain at this block height"
 msgstr "Tento obchod byl zahrnut do blockchainu v této výšce bloku"
 
-#: src/components/app/AppTimeBombAlert.tsx:19
+#: src/components/app/AppTimeBombAlert.tsx:18
 msgid "This version of DogeChia is no longer compatible with the blockchain and can not safely farm."
-msgstr "Tato verze DogeChia již není kompatibilní s blockchainem a nemůže bezpečně farmit."
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"
@@ -2196,7 +2189,7 @@ msgstr "Vytvořeno"
 #~ msgid "Time this trade was created at this time"
 #~ msgstr ""
 
-#: src/components/block/Block.jsx:189
+#: src/components/block/Block.jsx:184
 msgid "Timestamp"
 msgstr "Časová značka"
 
@@ -2230,7 +2223,7 @@ msgstr "Celková velikost pole:"
 msgid "Total Size of Plots"
 msgstr "Celková velikost polí"
 
-#: src/components/block/Block.jsx:225
+#: src/components/block/Block.jsx:220
 msgid "Total VDF Iterations"
 msgstr "Celkové VDF iterace"
 
@@ -2238,9 +2231,9 @@ msgstr "Celkové VDF iterace"
 msgid "Total iterations since the start of the blockchain"
 msgstr "Počet opakování od začátku blockchainu"
 
-#: src/components/dashboard/DashboardSideBar.tsx:27
-#~ msgid "Trade"
-#~ msgstr "Trade"
+#: src/components/dashboard/DashboardSideBar.tsx:61
+msgid "Trade"
+msgstr "Trade"
 
 #: src/components/trading/TradingOverview.jsx:350
 msgid "Trade Details"
@@ -2270,7 +2263,7 @@ msgstr "Obchodování"
 msgid "Trading History"
 msgstr "Historie transakce"
 
-#: src/components/block/Block.jsx:293
+#: src/components/block/Block.jsx:279
 msgid "Transactions Filter Hash"
 msgstr "Hash filtru transakcí"
 
@@ -2324,7 +2317,7 @@ msgstr ""
 msgid "Verify Pool Details"
 msgstr ""
 
-#: src/electron/main.tsx:295
+#: src/electron/main.tsx:296
 msgid "View"
 msgstr "Zobrazení"
 
@@ -2374,7 +2367,7 @@ msgid "Waiting for the transaction to be confirmed"
 msgstr ""
 
 #: src/components/pool/PoolOverview.tsx:185
-#: src/components/wallet/standard/WalletStandard.tsx:674
+#: src/components/wallet/standard/WalletStandard.tsx:534
 msgid "Wallet Status:"
 msgstr ""
 
@@ -2406,8 +2399,8 @@ msgstr ""
 #~ msgid "WalletStatusCard.syncing"
 #~ msgstr ""
 
-#: src/components/dashboard/DashboardSideBar.tsx:45
-#: src/components/wallet/Wallets.tsx:173
+#: src/components/dashboard/DashboardSideBar.tsx:46
+#: src/components/wallet/Wallets.tsx:175
 msgid "Wallets"
 msgstr "Peněženky"
 
@@ -2421,23 +2414,23 @@ msgstr ""
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
 msgid "Want to earn more DogeChia? Add more plots to your farm."
-msgstr "Chcete získat více DogeChia? Přidejte další pole do vaší farmy."
+msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:86
 msgid "Want to have a delay before the next plot starts?"
 msgstr "Chcete posunout začátek vytváření dalšího pole?"
 
-#: src/components/block/Block.jsx:205
+#: src/components/block/Block.jsx:198
 msgid "Weight"
 msgstr "Váha"
 
-#: src/components/block/Block.jsx:208
+#: src/components/block/Block.jsx:201
 msgid "Weight is the total added difficulty of all sub blocks up to and including this one"
 msgstr "Váha je celková přidaná obtížnost všech dílčích bloků až po tento blok včetně"
 
 #: src/components/selectKey/SelectKey.tsx:112
 msgid "Welcome to DogeChia. Please log in with an existing key, or create a new key."
-msgstr "Vítejte v DogeChia. Přihlaste se pomocí existujícího klíče, nebo si vytvořte nový klíč."
+msgstr ""
 
 #: src/components/wallet/WalletAdd.tsx:66
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
@@ -2447,7 +2440,7 @@ msgstr "Vítejte! Následující slova použijte pro zazálohování své peně�
 msgid "When you receive the setup info packet from your admin, enter it below to complete your Rate Limited Wallet setup:"
 msgstr "Pro dokončení registrace Rate Limited peněženky potřebujete instalační paket. Ten obdržíte od svého správce a vyplníte ho zde:"
 
-#: src/electron/main.tsx:340
+#: src/electron/main.tsx:341
 msgid "Window"
 msgstr "Okno"
 
@@ -2526,7 +2519,7 @@ msgstr ""
 msgid "Your Farm Overview"
 msgstr "Přehled vaší farmy"
 
-#: src/components/farm/FarmFullNodeConnections.tsx:95
+#: src/components/farm/FarmFullNodeConnections.tsx:96
 msgid "Your Full Node Connection"
 msgstr "Vaše spojení s uzlem"
 
@@ -2547,16 +2540,16 @@ msgid "[Error 22] File not found. Most likely one of the plot folders in your co
 msgstr "[Chyba 22] Soubor nenalezen. Jedna ze složek polí v konfiguraci má pravděpodobně potíže."
 
 #: src/components/wallet/WalletStatusCard.tsx:41
-#: src/components/wallet/Wallets.tsx:143
+#: src/components/wallet/Wallets.tsx:150
 msgid "connections:"
 msgstr "spojení:"
 
 #: src/components/wallet/WalletStatusCard.tsx:33
-#: src/components/wallet/Wallets.tsx:135
+#: src/components/wallet/Wallets.tsx:142
 msgid "height:"
 msgstr "výška:"
 
-#: src/components/wallet/Wallets.tsx:129
+#: src/components/wallet/Wallets.tsx:136
 msgid "not synced"
 msgstr "nesynchronizováno"
 
@@ -2565,17 +2558,17 @@ msgid "p2_singleton_puzzle_hash is not defined"
 msgstr ""
 
 #: src/components/wallet/WalletStatusCard.tsx:27
-#: src/components/wallet/Wallets.tsx:123
+#: src/components/wallet/Wallets.tsx:130
 msgid "status:"
 msgstr "stav:"
 
 #: src/components/wallet/WalletStatusCard.tsx:29
-#: src/components/wallet/Wallets.tsx:128
+#: src/components/wallet/Wallets.tsx:135
 msgid "synced"
 msgstr "synchronizováno"
 
 #: src/components/wallet/WalletStatusCard.tsx:29
-#: src/components/wallet/Wallets.tsx:127
+#: src/components/wallet/Wallets.tsx:134
 msgid "syncing"
 msgstr "synchronizace"
 
@@ -2597,7 +2590,7 @@ msgstr "Blokové odměny {currencyCode}"
 
 #: src/components/farm/card/FarmCardTotalDogeChiaFarmed.tsx:29
 msgid "{currencyCode} Total DogeChia Farmed"
-msgstr "Celkem nafarmařeno {currencyCode}"
+msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28
 msgid "{currencyCode} User Transaction Fees"

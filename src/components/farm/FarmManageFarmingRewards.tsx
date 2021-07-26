@@ -114,14 +114,19 @@ export default function FarmManageFarmingRewards(props: Props) {
       aria-labelledby="manage-farming-rewards-title"
       open={open}
     >
-      <Form methods={methods} onSubmit={handleSubmit}>
+      <Form
+        methods={methods}
+        onSubmit={handleSubmit}
+      >
         <DialogTitle id="manage-farming-rewards-title">
           <Trans>Manage Your Farming Rewards Target Addresses</Trans>
         </DialogTitle>
         <DialogContent dividers>
           <Flex gap={2} flexDirection="column">
             {loading ? (
-              <Loading center />
+              <Flex justifyContent="center">
+                <Loading />
+              </Flex>
             ) : (
               <>
                 {error && <Alert severity="error">{error.message}</Alert>}

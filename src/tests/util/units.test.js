@@ -2,8 +2,8 @@ const units = require('../../util/units');
 
 describe('units', () => {
   describe('#getUnit', () => {
-    it('gets unit of chia', () => {
-      const result = units.getUnit('chia');
+    it('gets unit of dogechia', () => {
+      const result = units.getUnit('dogechia');
 
       expect(result).toBe(1);
     });
@@ -18,10 +18,14 @@ describe('units', () => {
       expect(result).toBe(1e-9);
     });
     it('supports uppercase characters', () => {
+      const result = units.getUnit('CHIA');
+    it('supports uppercase characters', () => {
       const result = units.getUnit('DOGECHIA');
 
       expect(result).toBe(1);
     });
+    it('gets unit of dogechia using alias', () => {
+      const result = units.getUnit('ch');
     it('gets unit of chia using alias', () => {
       const result = units.getUnit('dg');
 
@@ -93,7 +97,7 @@ describe('units', () => {
 
       expect(result).toEqual(9);
 
-      units.setUnit("dogechia", 1);
+      units.setUnit('dogechia', 1);
     });
   });
   describe('#setDisplay', () => {
@@ -111,12 +115,12 @@ describe('units', () => {
       });
     });
     it('updates an existing display', () => {
-      units.setDisplay('chia', {
-        format: '{amount} TXCH',
+      units.setDisplay('dogechia', {
+        format: '{amount} TXDG',
         fractionDigits: 0,
       });
 
-      const result = units.getDisplay('chia');
+      const result = units.getDisplay('dogechia');
 
       expect(result).toEqual({
         format: '{amount} TXDG',
